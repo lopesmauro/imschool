@@ -1,4 +1,3 @@
-import viteLogo from '/vite.svg'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 
