@@ -14,7 +14,7 @@ import {
 
 const About2 = () => {
     return (
-        <div className="py-24 pt-20 relative container mx-auto px-4" >
+        <div className="py-24 pt-20 relative container mx-auto px-20" >
             < div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-50/30 to-transparent rounded-3xl" ></div >
 
             <div className="relative text-center mb-16">

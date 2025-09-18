@@ -5,7 +5,7 @@ const Contact = () => {
 
     return (
         <section id="contato" className="py-24 bg-gradient-to-r from-yellow-50 via-white to-yellow-50">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-20">
                 {/* Título */}
                 <div className="text-center mb-16">
                     <p className="text-gray-500 uppercase tracking-wide font-semibold">Comece agora</p>

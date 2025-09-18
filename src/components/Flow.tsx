@@ -34,7 +34,7 @@ const Flow = () => {
 
     return (
         <section className="py-24 bg-black">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-20">
                 {/* Título da seção */}
                 <div className="text-center mb-16">
                     <p className="text-gray-500 uppercase tracking-wide font-semibold">Fluxo de atendimento</p>
