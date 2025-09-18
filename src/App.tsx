@@ -4,6 +4,7 @@ import Flow from './components/Flow'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
+import About2 from './components/About2'
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <About />
+      <About2 />
       <Flow />
       <Contact />
       <Footer />
