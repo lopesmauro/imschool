@@ -13,7 +13,7 @@ const Logo = () => {
                 </div>
             </div>
             <div className="flex flex-col">
-                <span className="text-2xl font-bold text-primary bg-clip-text">
+                <span className="text-2xl font-bold text-yellow-500 bg-clip-text">
                     ImSchool
                 </span>
                 <span className="text-xs text-muted-foreground">

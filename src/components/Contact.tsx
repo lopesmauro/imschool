@@ -10,7 +10,7 @@ const Contact = () => {
                 <div className="text-center mb-16">
                     <p className="text-gray-500 uppercase tracking-wide font-semibold">Comece agora</p>
                     <h2 className="text-4xl md:text-5xl font-bold mt-2">
-                        Realize sua <span className="text-primary">Inscrição</span>!
+                        Realize sua <span className="text-yellow-500">Inscrição</span>!
                     </h2>
                     <p className="text-lg md:text-xl text-gray-600 mt-4 max-w-xl mx-auto">
                         Pronto para começar sua jornada no inglês? Clique no botão ou escaneie o QR Code.
@@ -25,8 +25,7 @@ const Contact = () => {
                             href={whatsappUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full inline-block text-white font-medium px-8 py-4 rounded-2xl shadow-lg transition-transform duration-200 transform hover:-translate-y-1 hover:shadow-2xl"
-                            style={{ backgroundColor: "hsl(45 90% 65%)" }}
+                            className="w-full inline-block text-white font-medium px-8 py-4 rounded-2xl shadow-lg transition-transform duration-200 transform hover:-translate-y-1 hover:shadow-2xl bg-yellow-500"
                         >
                             Conversar no WhatsApp
                         </a>

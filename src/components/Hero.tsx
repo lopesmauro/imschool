@@ -14,7 +14,7 @@ const Hero = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-5 z-10 relative">
                         <h1 className="text-5xl lg:text-6xl font-bold">
-                            Aprenda <span className="text-primary">Inglês</span> de
+                            Aprenda <span className="text-yellow-500">Inglês</span> de
                             <br />Forma Eficiente
                         </h1>
 
@@ -24,7 +24,7 @@ const Hero = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="bg-primary hover:bg-primary/90 text-black font-semibold px-12 py-3 rounded-lg text-sm flex items-center transition-colors shadow-elegant">
+                            <button className="bg-yellow-500 hover:bg-primary/90 text-black font-semibold px-12 py-3 rounded-lg text-sm flex items-center transition-colors shadow-elegant">
                                 Comece Agora
                                 <ArrowRight className="ml-2 h-4 w-4" />
                             </button>
