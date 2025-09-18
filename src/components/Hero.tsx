@@ -10,7 +10,7 @@ const Hero = () => {
                 className="absolute top-0 right-0 h-full w-1/2 object-cover pointer-events-none select-none"
             />
 
-            <div className="container mx-auto px-20 py-20">
+            <div className="container mx-auto px-20 py-20 max-w-7xl">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-5 z-10 relative">
                         <h1 className="text-5xl lg:text-6xl font-bold">

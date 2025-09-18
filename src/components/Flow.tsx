@@ -25,7 +25,7 @@ const Flow = () => {
             title: "Comece a Estudar",
             description: "Inicie sua jornada rumo à fluência com nossa metodologia única",
         },
-        { 
+        {
             step: "6",
             title: "Consolide seu Aprendizado",
             description: "Pratique e revise os conteúdos para maior retenção",
@@ -33,8 +33,17 @@ const Flow = () => {
     ];
 
     return (
-        <section className="py-24 bg-black">
-            <div className="container mx-auto px-20">
+        <section className="relative py-24 bg-black overflow-hidden">
+            {/* Linhas diagonais no fundo */}
+            <div className="absolute inset-0 pointer-events-none z-0 opacity-5 bg-[linear-gradient(135deg,#facc15_1px,transparent_1px)] [background-size:60px_60px]"></div>
+
+            {/* Geometria canto inferior direito */}
+            <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] border-2 border-yellow-600/20 rotate-[45deg] z-0 rounded-xl"></div>
+
+            {/* Geometria canto superior esquerdo */}
+            <div className="absolute -top-32 -left-32 w-[400px] h-[400px] border-2 border-yellow-500/20 rotate-[30deg] z-0 rounded-xl"></div>
+
+            <div className="container mx-auto px-6 md:px-20 relative z-10 max-w-7xl">
                 {/* Título da seção */}
                 <div className="text-center mb-16">
                     <p className="text-gray-500 uppercase tracking-wide font-semibold">Fluxo de atendimento</p>
@@ -51,14 +60,20 @@ const Flow = () => {
                     {steps.map((step, index) => (
                         <div
                             key={index}
-                            className="flex flex-col p-6 bg-yellow-500 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300"
+                            className="relative overflow-hidden flex flex-col p-6 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300"
                         >
-                            <div className="text-8xl font-extrabold text-yellow-600">
-                                <h1>{step.step}</h1>
-                            </div>
+                            {/* Elemento decorativo superior direito no card */}
+                            <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-yellow-200/40 to-yellow-500/10 rounded-full z-0"></div>
 
-                            <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                            <p className="text-sm text-gray-700 mb-1">{step.description}</p>
+                            {/* Conteúdo principal */}
+                            <div className="relative z-10">
+                                <div className="text-8xl font-extrabold text-yellow-700 opacity-90">
+                                    <h1>{step.step}</h1>
+                                </div>
+
+                                <h3 className="text-xl font-extrabold mb-2 text-yellow-900">{step.title}</h3>
+                                <p className="text-sm text-gray-700 mb-1">{step.description}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
