@@ -4,6 +4,8 @@ import Flow from './components/Flow'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
+import Plans from './components/Plans'
+import Testimonials from './components/Testimonials'
 
 
 function App() {
@@ -13,8 +15,10 @@ function App() {
       <Navbar />
       <Hero />
       <About2 />
+      <Plans />
       <Flow />
       <Contact />
+      <Testimonials />
       <Footer />
     </>
   )

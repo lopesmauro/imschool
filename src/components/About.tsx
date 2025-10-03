@@ -1,124 +1,88 @@
-import {
-    Brain,
-    Target,
-    Zap,
-    Users,
-    Award,
-    TrendingUp,
-} from 'lucide-react';
+import { Users, Award } from 'lucide-react';
+import aboutImage from '../assets/aboutus.jpeg';
 
-const About2 = () => {
+const AboutUs = () => {
+    const highlights = [
+        {
+            icon: Users,
+            label: 'Compromisso com os alunos',
+            text: 'Mais de uma década dedicada a apoiar estudantes na conquista de seus objetivos pessoais e profissionais através da educação de qualidade.',
+        },
+        {
+            icon: Award,
+            label: 'Excelência reconhecida',
+            text: 'Nossa metodologia inovadora já foi premiada diversas vezes e continua transformando vidas ao oferecer aprendizado eficaz e duradouro.',
+        },
+    ];
+
     return (
-        <div className="py-24 pt-20 relative container mx-auto px-20 max-w-7xl" >
-            < div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-50/30 to-transparent rounded-3xl" ></div >
+        <section className="relative py-24 bg-gradient-to-b from-white via-amber-50/30 to-white overflow-hidden">
+            <div className="container mx-auto px-6 lg:px-20 max-w-7xl">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            <div className="relative text-center mb-16">
-                <p className="text-gray-500 uppercase tracking-wide font-semibold">Comece agora</p>
+                    {/* Left Side - Mockup da plataforma */}
+                    <div className="relative flex justify-center items-center">
+                        {/* Fundo flutuante com gradiente e sombra igual aos cards do Flow */}
+                        <div className="absolute -inset-4 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-3xl shadow-2xl transform rotate-2 scale-105"></div>
+                        
+                        <div className="relative rounded-3xl overflow-hidden shadow-2xl ">
+                            <img
+                                src={aboutImage}
+                                alt="Nossa história e método de ensino"
+                                className="w-full h-full object-contain object-top transition-transform duration-700 group-hover:scale-105"
+                            />
+                        </div>
 
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                    O que nos torna diferentess
-                </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Não seguimos fórmulas prontas. Criamos uma experiência única que transforma
-                    a maneira como você aprende e vive o inglês.
-                </p>
-            </div>
-
-            <div className="grid lg:grid-cols-3 gap-8 relative">
-                <div className="group relative">
-                    <div className="bg-white rounded-3xl p-8 shadow-lg border border-amber-100 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-100/50 to-yellow-100/30 rounded-full -translate-y-16 translate-x-16"></div>
-
-                        <div className="relative">
-                            <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                                <Zap className="w-10 h-10 text-white" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Aprendizado Acelerado</h3>
-                            <p className="text-gray-600 leading-relaxed mb-6">
-                                Técnicas neurocientíficas que otimizam a retenção e aceleram
-                                o processo natural de aquisição do idioma.
-                            </p>
-
-                            <div className="flex items-center gap-4 pt-4 border-t border-amber-100">
-                                <div className="flex items-center gap-2">
-                                    <TrendingUp className="w-4 h-4 text-amber-600" />
-                                    <span className="text-sm font-semibold text-gray-700">3x mais rápido</span>
+                        {/* Floating Badge */}
+                        <div className="absolute bottom-6 left-6 z-20 bg-white/95 backdrop-blur-sm rounded-xl px-5 py-3 shadow-lg">
+                            <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
+                                    <Award className="w-5 h-5 text-black" />
                                 </div>
-                                <div className="flex items-center gap-2">
-                                    <Brain className="w-4 h-4 text-amber-600" />
-                                    <span className="text-sm font-semibold text-gray-700">95% retenção</span>
+                                <div>
+                                    <p className="text-xl font-bold text-gray-900">2+</p>
+                                    <p className="text-xs text-gray-600">Anos de experiência</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div className="group relative lg:-mt-8">
-                    <div className="bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:-translate-y-2 relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-400/20 to-yellow-400/10 rounded-full -translate-y-16 translate-x-16"></div>
+                    {/* Right Side - Conteúdo */}
+                    <div className="flex flex-col justify-center">
+                        <p className="text-yellow-600 uppercase tracking-wide font-semibold mb-3">
+                            Sobre Nós
+                        </p>
 
-                        <div className="absolute top-6 right-6 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-xs font-bold px-3 py-1 rounded-full">
-                            DESTAQUE
+                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            Transformando vidas através da educação
+                        </h2>
+
+                        <div className="flex flex-col gap-6 mb-8">
+                            {highlights.map((item, index) => {
+                                const Icon = item.icon;
+                                return (
+                                    <div key={index} className="flex items-start gap-4">
+                                        <Icon className="w-12 h-12 text-yellow-500 mt-1" />
+                                        <div>
+                                            <p className="text-xl font-bold text-gray-900">{item.label}</p>
+                                            <p className="text-sm text-gray-600">{item.text}</p>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
 
-                        <div className="relative">
-                            <div className="w-20 h-20 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                                <Target className="w-10 h-10 text-black" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-white mb-4">Foco no Seu Objetivo</h3>
-                            <p className="text-gray-300 leading-relaxed mb-6">
-                                Currículo personalizado baseado no seu perfil: negócios,
-                                viagem, intercâmbio ou crescimento profissional.
-                            </p>
-
-                            <div className="space-y-3">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    <span className="text-sm text-gray-300">Análise de perfil personalizada</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    <span className="text-sm text-gray-300">Conteúdo adaptado ao seu setor</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    <span className="text-sm text-gray-300">Simulações de situações reais</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="group relative">
-                    <div className="bg-white rounded-3xl p-8 shadow-lg border border-amber-100 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-100/50 to-yellow-100/30 rounded-full -translate-y-16 translate-x-16"></div>
-
-                        <div className="relative">
-                            <div className="w-20 h-20 bg-gradient-to-br from-gray-800 to-black rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                                <Brain className="w-10 h-10 text-amber-400" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Mentalidade Global</h3>
-                            <p className="text-gray-600 leading-relaxed mb-6">
-                                Desenvolvemos não apenas fluência, mas confiança para
-                                se comunicar em qualquer contexto internacional.
-                            </p>
-
-                            <div className="flex flex-wrap gap-2 pt-4 border-t border-amber-100">
-                                <div className="flex items-center gap-1 bg-amber-100 px-3 py-1 rounded-full">
-                                    <Award className="w-3 h-3 text-amber-600" />
-                                    <span className="text-xs font-medium text-amber-800">Certificação Internacional</span>
-                                </div>
-                                <div className="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full">
-                                    <Users className="w-3 h-3 text-gray-600" />
-                                    <span className="text-xs font-medium text-gray-700">Network Global</span>
-                                </div>
-                            </div>
-                        </div>
+                        <button className="group w-fit bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold px-8 py-4 rounded-xl hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2">
+                            Conheça nossa história
+                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
+        </section>
+    );
+};
 
-        </div>)
-}
-//Adicionar elementos do base44 abaixo desses
-export default About2
+export default AboutUs;
