@@ -6,7 +6,7 @@ const AboutUs = () => {
         {
             icon: Users,
             label: 'Compromisso com os alunos',
-            text: 'Mais de uma década dedicada a apoiar estudantes na conquista de seus objetivos pessoais e profissionais através da educação de qualidade.',
+            text: 'Quase uma década dedicada a apoiar estudantes na conquista de seus objetivos pessoais e profissionais através da educação de qualidade.',
         },
         {
             icon: Award,
@@ -40,7 +40,7 @@ const AboutUs = () => {
                                     <Award className="w-5 h-5 text-black" />
                                 </div>
                                 <div>
-                                    <p className="text-xl font-bold text-gray-900">2+</p>
+                                    <p className="text-xl font-bold text-gray-900">7+</p>
                                     <p className="text-xs text-gray-600">Anos de experiência</p>
                                 </div>
                             </div>
@@ -72,7 +72,7 @@ const AboutUs = () => {
                             })}
                         </div>
 
-                        <button className="group w-fit bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold px-8 py-4 rounded-xl hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2">
+                        <button className="group w-fit bg-yellow-500 text-black font-semibold px-8 py-4 rounded-xl hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2">
                             Conheça nossa história
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

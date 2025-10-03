@@ -33,15 +33,15 @@ const Hero = () => {
 
                         <div className="flex items-center gap-8 pt-8">
                             <div className="text-center">
-                                <div className="text-3xl font-bold text-primary">500+</div>
+                                <div className="text-3xl font-bold text-primary">1200+</div>
                                 <div className="text-sm text-muted-foreground">Alunos Aprovados</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-3xl font-bold">95%</div>
+                                <div className="text-3xl font-bold">93.5%</div>
                                 <div className="text-sm text-muted-foreground">Taxa de Sucesso</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-3xl font-bold text-primary">5⭐</div>
+                                <div className="text-3xl font-bold text-primary">4,6⭐</div>
                                 <div className="text-sm text-muted-foreground">Avaliação Média</div>
                             </div>
                         </div>
