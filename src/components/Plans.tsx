@@ -4,40 +4,46 @@ const Plans = () => {
     const plans = [
         {
             name: 'Essencial',
-            price: 'R$ 297',
+            price: 'R$ 359',
             period: '/mês',
             description: 'Perfeito para começar sua jornada',
             icon: Sparkles,
             features: [
-                '2 aulas por semana',
-                'Acesso à plataforma digital',
-                'Material didático incluído',
+                'Plataforma (Básico ao Avançado)',
+                'Suporte com professor designado (Diariamente)',
+                'Plano de estudo padrão',
+                '4 aulas individuais de Conversação ao vivo. (30 minutos cada aula)',
+                'Certificado ao concluir o curso'
             ],
             highlighted: false
         },
         {
             name: 'Premium',
-            price: 'R$ 497',
+            price: 'R$ 529',
             period: '/mês',
             description: 'O mais escolhido pelos nossos alunos',
             icon: Crown,
             features: [
-                '3 aulas por semana',
-                'Acesso ilimitado à plataforma',
-                'Material didático premium',
+                'Plataforma (Básico ao Avançado)',
+                'Suporte com professor designado (Diariamente)',
+                'Plano de estudo padrão',
+                '4 aulas individuais de Conversação ao vivo. (45 minutos cada aula)',
+                'Certificado ao concluir o curso'
             ],
             highlighted: true
         },
         {
             name: 'Executive',
-            price: 'R$ 897',
+            price: 'R$ 717',
             period: '/mês',
             description: 'Experiência personalizada e exclusiva',
             icon: Rocket,
             features: [
-                'Aulas individuais ilimitadas',
-                'Professor dedicado',
-                'Currículo 100% personalizado',
+                'Plataforma (Básico ao Avançado)',
+                'Suporte com professor designado (Diariamente)',
+                'Plano de estudo personalizado',
+                '4 aulas individuais de Conversação ao vivo. (1 hora cada aula)',
+                'Certificado ao concluir o curso'
             ],
             highlighted: false
         }

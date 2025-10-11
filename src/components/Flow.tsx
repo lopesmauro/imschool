@@ -2,33 +2,33 @@ const Flow = () => {
     const steps = [
         {
             step: "1",
-            title: "Escolha seu Curso",
-            description: "Selecione o nível ideal: Básico, Intermediário ou Avançado",
+            title: "Escolha seu Plano",
+            description: "Defina o plano que melhor se encaixa nos seus objetivos.",
         },
         {
             step: "2",
             title: "Inscrição Online",
-            description: "Preencha seus dados e faça sua matrícula em poucos minutos",
+            description: "Preencha seus dados de forma rápida e segura.",
         },
         {
             step: "3",
-            title: "Pagamento Seguro",
-            description: "Escolha a forma de pagamento que preferir: cartão, PIX ou boleto",
+            title: "Confirme o pagamento",
+            description: "Finalize sua matrícula com total segurança.",
         },
         {
             step: "4",
-            title: "Acesso à Plataforma",
-            description: "Receba suas credenciais e acesse nossa plataforma EAD",
+            title: "Acesse a Plataforma",
+            description: "Receba seu login e explore os recursos disponíveis.",
         },
         {
             step: "5",
             title: "Comece a Estudar",
-            description: "Inicie sua jornada rumo à fluência com nossa metodologia única",
+            description: "Tenha acesso imediato às aulas e materiais.",
         },
         {
             step: "6",
             title: "Consolide seu Aprendizado",
-            description: "Pratique e revise os conteúdos para maior retenção",
+            description: "Pratique, avance de nível e alcance a fluência.",
         },
     ];
 
