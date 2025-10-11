@@ -72,7 +72,7 @@ const Flow = () => {
                                 </div>
 
                                 <h3 className="text-xl font-extrabold mb-2 text-yellow-900">{step.title}</h3>
-                                <p className="text-sm text-gray-700 mb-1">{step.description}</p>
+                                <p className="text-sm text-gray-800 mb-1">{step.description}</p>
                             </div>
                         </div>
                     ))}
