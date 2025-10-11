@@ -1,6 +1,10 @@
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
+        const phoneNumber = "+5492216045067";
+    const message = "Olá! Gostaria de saber mais sobre o curso de inglês EAD.";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
     return (
         <section className="relative min-h-screen flex items-center bg-white overflow-hidden">
             {/* Imagem de fundo */}
@@ -36,7 +40,7 @@ const Hero = () => {
 
                         <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2">
                             <button className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-10 py-3 rounded-lg text-base flex items-center justify-center transition-all shadow-md hover:shadow-lg">
-                                Comece Agora
+                                <a href={whatsappUrl} target="_blank">Comece agora</a>
                                 <ArrowRight className="ml-2 h-4 w-4" />
                             </button>
                         </div>
