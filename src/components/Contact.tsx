@@ -1,6 +1,6 @@
 const Contact = () => {
     const phoneNumber = "+5492216045067";
-    const message = "Olá! Gostaria de saber mais sobre o curso de inglês EAD.";
+    const message = "Olá! Gostaria de saber mais sobre o curso de inglês.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     return (

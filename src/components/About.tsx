@@ -3,7 +3,7 @@ import aboutImage from "../assets/aboutus.jpeg";
 
 const AboutUs = () => {
   const phoneNumber = "+5492216045067";
-  const message = "Olá! Gostaria de saber mais sobre o curso de inglês EAD.";
+  const message = "Olá! Gostaria de saber mais sobre o curso de inglês.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   const highlights = [
@@ -88,23 +88,23 @@ const AboutUs = () => {
             </div>
 
             <button className="group bg-yellow-500 text-black font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-2 self-start">
-  <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-block">
-    Inscreva-se
-  </a>
-  <svg
-    className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M17 8l4 4m0 0l-4 4m4-4H3"
-    />
-  </svg>
-</button>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-block">
+                Inscreva-se
+              </a>
+              <svg
+                className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </button>
 
 
 
