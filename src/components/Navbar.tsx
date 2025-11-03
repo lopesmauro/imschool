@@ -6,7 +6,7 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const phoneNumber = "+5492216045067";
 
-    const message = "Olá! Gostaria de saber mais sobre o curso de inglês.";
+    const message = "🎓 Olá! Quero fazer minha matrícula e começar a estudar inglês com vocês. Pode me ajudar com o processo?";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
 

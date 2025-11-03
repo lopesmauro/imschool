@@ -3,7 +3,7 @@ import aboutImage from "../assets/aboutus.jpeg";
 
 const AboutUs = () => {
   const phoneNumber = "+5492216045067";
-  const message = "Olá! Gostaria de saber mais sobre o curso de inglês.";
+  const message = "✍️ Olá! Gostaria de me inscrever no curso de inglês. Pode me enviar mais informações?Olá! Gostaria de saber mais sobre o curso de inglês.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   const highlights = [
