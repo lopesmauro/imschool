@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 /* ✅ Novo formato com @theme */ 
@@ -100,4 +101,8 @@
   --color-sidebar-accent-foreground: hsl(240 4.8% 95.9%);
   --color-sidebar-border: hsl(240 3.7% 15.9%);
   --color-sidebar-ring: hsl(217.2 91.2% 59.8%);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
 }
