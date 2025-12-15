@@ -92,7 +92,7 @@ const AboutUs = () => {
                 <img
                   src={aboutImage}
                   alt="Nossa história e método de ensino"
-                  className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </div>
