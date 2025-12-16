@@ -45,25 +45,29 @@ const Hero = () => {
 
         {/* ESTATÍSTICAS - Ajustadas para colar embaixo no mobile */}
         <div className="
-          /* Mobile: Colado no fundo */
-          absolute bottom-0 left-0 w-full px-6 pb-8 
-          /* Desktop: Volta para o fluxo normal abaixo do texto */
-          lg:relative lg:bottom-auto lg:left-auto lg:w-auto lg:px-0 lg:pb-0 lg:mt-12 lg:border-t lg:border-black/10
-          
-          flex justify-between lg:justify-start gap-4 sm:gap-12 
-          text-white lg:text-black pt-6
-        ">
-          <div>
-            <p className="text-xl sm:text-3xl font-semibold">2.500+</p>
-            <p className="text-[10px] sm:text-sm text-white/70 lg:text-gray-500 uppercase tracking-wider">Alunos</p>
-          </div>
-          <div>
-            <p className="text-xl sm:text-3xl font-semibold">98%</p>
-            <p className="text-[10px] sm:text-sm text-white/70 lg:text-gray-500 uppercase tracking-wider">Aprovação</p>
-          </div>
-          <div>
-            <p className="text-xl sm:text-3xl font-semibold">8 anos</p>
-            <p className="text-[10px] sm:text-sm text-white/70 lg:text-gray-500 uppercase tracking-wider">Experiência</p>
+    /* Mobile: Colado no fundo */
+    absolute bottom-0 left-0 w-full px-6 pb-8 
+    /* Desktop: Volta para o fluxo normal abaixo do texto */
+    lg:relative lg:bottom-auto lg:left-auto lg:w-auto lg:px-0 lg:pb-0 lg:mt-16
+    
+    text-white lg:text-black
+">
+          {/* Borda como elemento separado (visível apenas em Desktop) */}
+          <div className="hidden lg:block h-[1px] bg-black/10 w-2/4" />
+
+          <div className="flex justify-between lg:justify-start gap-4 sm:gap-12 mt-8">
+            <div>
+              <p className="text-xl sm:text-3xl font-semibold">2.500+</p>
+              <p className="text-[10px] sm:text-sm text-white/70 lg:text-gray-500 uppercase tracking-wider">Alunos</p>
+            </div>
+            <div>
+              <p className="text-xl sm:text-3xl font-semibold">98%</p>
+              <p className="text-[10px] sm:text-sm text-white/70 lg:text-gray-500 uppercase tracking-wider">Aprovação</p>
+            </div>
+            <div>
+              <p className="text-xl sm:text-3xl font-semibold">8 anos</p>
+              <p className="text-[10px] sm:text-sm text-white/70 lg:text-gray-500 uppercase tracking-wider">Experiência</p>
+            </div>
           </div>
         </div>
       </div>

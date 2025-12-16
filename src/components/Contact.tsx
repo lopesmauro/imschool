@@ -31,21 +31,29 @@ const Contact = () => {
                             </p>
                         </div>
 
-                        {/* Botão CTA */}
-                        <div className="mb-6">
+                        {/* Botões de Ação */}
+                        <div className="mb-6 flex flex-wrap gap-4">
                             <a
                                 href={whatsappUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="relative inline-block px-10 py-5 text-lg font-semibold text-white rounded-2xl shadow-xl bg-yellow-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-yellow-600"
+                                className="relative inline-block px-10 py-5 text-lg font-normal text-black rounded-2xl shadow-xl bg-yellow-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-yellow-600"
                             >
-                                Conversar no WhatsApp
+                                Falar no WhatsApp
                                 <span className="absolute -bottom-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full blur-sm opacity-40"></span>
                             </a>
-                            <p className="text-sm text-gray-500 max-w-xs mt-4">
-                                Atendimento imediato e personalizado para tirar suas dúvidas.
-                            </p>
+
+                            <a
+                                href="#precos"
+                                className="inline-block px-10 py-5 text-lg font-semibold text-yellow-600 rounded-2xl border-2 border-yellow-500 transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-50"
+                            >
+                                Ver os Valores
+                            </a>
                         </div>
+                        
+                        <p className="text-sm text-gray-500  mb-8">
+                            Atendimento imediato e personalizado para tirar suas dúvidas.
+                        </p>
 
                         {/* Benefícios rápidos */}
                         <div className="space-y-2 text-sm text-gray-700 mb-8">
@@ -78,7 +86,7 @@ const Contact = () => {
 
                     {/* COLUNA DIREITA - QR CODE GRANDE */}
                     <div className="flex-1 flex flex-col items-center justify-center">
-                        <div className="w-full max-w-md p-8 rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <div className="w-full p-8 rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
                             <img
                                 src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(
                                     whatsappUrl
