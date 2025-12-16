@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, RotateCw, Lock } from "lucide-react";
 
 const AboutUs = () => {
   return (
-    <section className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-amber-50/30 to-white overflow-hidden">
+    <section id="sobre" className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-amber-50/30 to-white overflow-hidden">
       <div className="container mx-auto px-6 sm:px-10 lg:px-20 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
           {/* Left Side - Conteúdo */}
