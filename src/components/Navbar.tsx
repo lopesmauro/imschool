@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const phoneNumber = "+5492216045067";
+    const phoneNumber = "+5492214098715";
 
     const message = "🎓 Olá! Quero fazer minha matrícula e começar a estudar inglês com vocês. Pode me ajudar com o processo?";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
