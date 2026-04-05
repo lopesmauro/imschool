@@ -2,22 +2,6 @@ import aboutImage from "../assets/aboutus.jpeg";
 import { ChevronLeft, ChevronRight, RotateCw, Lock } from "lucide-react";
 
 const AboutUs = () => {
-  const phoneNumber = "+5492214098715";
-  const message = "✍️ Olá! Gostaria de me inscrever no curso de inglês. Pode me enviar mais informações?Olá! Gostaria de saber mais sobre o curso de inglês.";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-  const highlights = [
-    {
-      icon: Users,
-      label: "Compromisso com os alunos",
-      text: "Quase uma década dedicada a apoiar estudantes na conquista de seus objetivos pessoais e profissionais através da educação de qualidade.",
-    },
-    {
-      icon: Award,
-      label: "Excelência reconhecida",
-      text: "Nossa metodologia inovadora já foi premiada diversas vezes e continua transformando vidas ao oferecer aprendizado eficaz e duradouro.",
-    },
-  ];
 
   return (
     <section id="sobre" className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-amber-50/30 to-white overflow-hidden">
