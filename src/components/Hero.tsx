@@ -1,76 +1,84 @@
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
+<<<<<<< HEAD
         const phoneNumber = "+5492214098715";
     const message = "🚀 Oi! Vi o site e quero começar agora minhas aulas de inglês. Quais são os próximos passos?";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+=======
+  const phoneNumber = "+5492216045067";
+  const message = "🚀 Oi! Vi o site e quero começar agora minhas aulas de inglês. Quais são os próximos passos?";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+>>>>>>> b6c42931067c40278145e3f55ad5a6fb67525c9f
 
-    return (
-        <section className="relative min-h-screen flex items-center bg-white overflow-hidden">
-            {/* Imagem de fundo */}
-            <img
-                src="/bg-hero.jpg"
-                alt="Hero background"
-                className="absolute top-0 left-0 w-full h-full object-cover lg:w-1/2 lg:right-0 lg:left-auto transition-all duration-500"
-            />
+  return (
+    <section className="sm:rounded-b-2xl relative min-h-screen bg-white flex items-center overflow-hidden">
+      {/* Imagem de fundo */}
+      <img
+        src="/bg-hero.jpg"
+        alt="Hero background"
+        className="absolute top-0 left-0 w-full h-full object-cover lg:w-1/2 lg:right-0 lg:left-auto transition-all duration-500"
+      />
 
-            {/* Overlay escuro suave apenas no mobile */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent lg:hidden" />
+      {/* Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent lg:hidden" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent hidden lg:block" />
 
-            {/* Gradiente branco no desktop para suavizar transição */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent hidden lg:block" />
+      <div className="container mx-auto px-6 sm:px-10 lg:px-20 py-16 sm:py-24 max-w-7xl relative z-10 h-full min-h-screen flex flex-col justify-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Coluna de Texto */}
+          <div className="space-y-6 text-left mb-20 lg:mb-0">
+            <h1 className="text-5xl sm:text-5xl lg:text-6xl text-white lg:text-black font-semibold leading-tight tracking-tight">
+              Aprenda <span className="text-yellow-500 shimmer-text">Inglês</span> de forma natural e eficiente<span className="text-yellow-500">.</span>
+            </h1>
 
-            {/* Conteúdo */}
-            <div className="container mx-auto px-6 sm:px-10 lg:px-20 py-16 sm:py-24 max-w-7xl relative z-10">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div
-                        className="space-y-6 text-center lg:text-left 
-                        text-white lg:text-black drop-shadow-[0_1.5px_1.5px_rgba(0,0,0,0.35)] 
-                        lg:drop-shadow-none"
-                    >
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                            Aprenda <span className="text-yellow-400 lg:text-yellow-500">Inglês</span> de
-                            <br className="hidden sm:block" /> Forma Eficiente
-                        </h1>
+            <p className="text-white/85 lg:text-gray-500 text-lg leading-relaxed max-w-xl">
+              Metodologia comprovada, aulas personalizadas e acompanhamento individual para você alcançar a fluência.
+            </p>
 
-                        <p className="text-base sm:text-lg lg:text-xl leading-relaxed max-w-xl mx-auto lg:mx-0">
-                            Na ImSchool, transformamos o aprendizado do inglês em uma jornada empolgante.
-                            Com metodologia comprovada e professores especializados, você alcança a fluência mais rápido.
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2">
-                            <button className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-10 py-3 rounded-lg text-base flex items-center justify-center transition-all shadow-md hover:shadow-lg">
-                                <a href={whatsappUrl} target="_blank">Comece agora</a>
-                                <ArrowRight className="ml-2 h-4 w-4" />
-                            </button>
-                        </div>
-
-                        <div className="flex flex-wrap justify-center lg:justify-start gap-8 pt-10">
-                            <div className="text-center">
-                                <div className="text-2xl sm:text-3xl font-bold text-yellow-400 lg:text-yellow-500">
-                                    1200+
-                                </div>
-                                <div className="text-sm opacity-90">Alunos Aprovados</div>
-                            </div>
-                            <div className="text-center">
-                                <div className="text-2xl sm:text-3xl font-bold">93.5%</div>
-                                <div className="text-sm opacity-90">Taxa de Sucesso</div>
-                            </div>
-                            <div className="text-center">
-                                <div className="text-2xl sm:text-3xl font-bold text-yellow-400 lg:text-yellow-500">
-                                    4,6⭐
-                                </div>
-                                <div className="text-sm opacity-90">Avaliação Média</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Espaço reservado no desktop */}
-                    <div className="hidden lg:block"></div>
-                </div>
+            <div className="flex justify-left lg:justify-start gap-4 pt-2">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium text-black bg-yellow-400 rounded-md shadow-sm hover:bg-yellow-300 transition-all hover:shadow-lg"
+              >
+                Comece agora
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
             </div>
-        </section>
-    );
+          </div>
+        </div>
+
+        {/* ESTATÍSTICAS - Ajustadas para colar embaixo no mobile */}
+        <div className="
+    /* Mobile: Colado no fundo */
+    absolute bottom-0 left-0 w-full px-6 pb-8 
+    /* Desktop: Volta para o fluxo normal abaixo do texto */
+    lg:relative lg:bottom-auto lg:left-auto lg:w-auto lg:px-0 lg:pb-0 lg:mt-16
+    
+    text-white lg:text-black
+">
+          {/* Borda como elemento separado (visível apenas em Desktop) */}
+          <div className="hidden lg:block h-[1px] bg-black/10 w-2/4" />
+
+          <div className="flex justify-between lg:justify-start gap-4 sm:gap-12 mt-8">
+            <div>
+              <p className="text-xl sm:text-3xl font-semibold">2.500+</p>
+              <p className="text-[10px] sm:text-sm text-white/70 lg:text-gray-500 uppercase tracking-wider">Alunos</p>
+            </div>
+            <div>
+              <p className="text-xl sm:text-3xl font-semibold">98%</p>
+              <p className="text-[10px] sm:text-sm text-white/70 lg:text-gray-500 uppercase tracking-wider">Aprovação</p>
+            </div>
+            <div>
+              <p className="text-xl sm:text-3xl font-semibold">8 anos</p>
+              <p className="text-[10px] sm:text-sm text-white/70 lg:text-gray-500 uppercase tracking-wider">Experiência</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Hero;

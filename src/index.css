@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 /* ✅ Novo formato com @theme */ 
@@ -101,3 +102,48 @@
   --color-sidebar-border: hsl(240 3.7% 15.9%);
   --color-sidebar-ring: hsl(217.2 91.2% 59.8%);
 }
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.shimmer-text {
+  color: #eab308;
+  font-weight: 900;
+  display: inline-block;
+  
+  /* Aumentamos para 400% para ter espaço de "descanso" */
+  background: linear-gradient(
+    110deg, 
+    #eab308 0%,    /* Início sólido */
+    #eab308 40%,   /* Cor sólida até chegar no brilho */
+    #fffce0 48%, 
+    #ffffff 50%, 
+    #fffce0 52%, 
+    #eab308 60%,   /* Fim do brilho */
+    #eab308 100%   /* Resto do espaço é sólido (pausa visual) */
+  );
+  
+  background-size: 400% 100%;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  /* Aumentei para 4s: 
+     2s de movimento + 2s de "pausa" (já que o gradiente é maior)
+  */
+  animation: shimmer-text 5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+@keyframes shimmer-text {
+  0% {
+    background-position: 150% 0;
+  }
+  100% {
+    /* Faz o gradiente atravessar completamente até o outro lado */
+    background-position: -150% 0;
+  }
+}
+
+
