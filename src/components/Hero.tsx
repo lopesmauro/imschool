@@ -1,15 +1,9 @@
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
-<<<<<<< HEAD
         const phoneNumber = "+5492214098715";
     const message = "🚀 Oi! Vi o site e quero começar agora minhas aulas de inglês. Quais são os próximos passos?";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-=======
-  const phoneNumber = "+5492216045067";
-  const message = "🚀 Oi! Vi o site e quero começar agora minhas aulas de inglês. Quais são os próximos passos?";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
->>>>>>> b6c42931067c40278145e3f55ad5a6fb67525c9f
 
   return (
     <section className="sm:rounded-b-2xl relative min-h-screen bg-white flex items-center overflow-hidden">
