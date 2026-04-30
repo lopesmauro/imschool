@@ -25,7 +25,7 @@ const Hero = () => {
                 repeatDelay={2.2}
                 spread={8}
                 baseGradient="linear-gradient(110deg, #f8d85a 0%, #f2c94c 48%, #e88a2f 100%)"
-                className="font-editorial-italic [--color-background:#fff] drop-shadow-[0_8px_18px_rgba(0,0,0,.2)]"
+                className="font-editorial-italic pb-[0.07em] [--color-background:#fff] drop-shadow-[0_8px_18px_rgba(0,0,0,.2)]"
               >
                 Inglês
               </Shimmer>{" "}
