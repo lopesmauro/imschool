@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Shimmer } from "@/components/ai/shimmer";
 
 const Hero = () => {
   return (
@@ -18,7 +19,17 @@ const Hero = () => {
           <div className="max-w-2xl">
 
             <h1 className="hero-reveal font-editorial max-w-[12ch] text-[3.7rem] leading-[0.98] tracking-normal text-white sm:text-7xl lg:text-[5.65rem]">
-              <span className="font-editorial-italic gold-reflection">Inglês</span> certo. Sem chute.
+              <Shimmer
+                as="span"
+                duration={1.1}
+                repeatDelay={2.2}
+                spread={8}
+                baseGradient="linear-gradient(110deg, #f8d85a 0%, #f2c94c 48%, #e88a2f 100%)"
+                className="font-editorial-italic [--color-background:#fff] drop-shadow-[0_8px_18px_rgba(0,0,0,.2)]"
+              >
+                Inglês
+              </Shimmer>{" "}
+              certo. Sem chute.
             </h1>
 
             <p className="hero-reveal-delay mt-5 max-w-xl text-base font-medium leading-relaxed text-white/86 sm:text-lg">

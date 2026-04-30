@@ -55,7 +55,7 @@ const Contact = () => {
                 </div>
 
                 <div className="grid gap-5 lg:grid-cols-[.75fr_1.25fr] lg:items-start">
-                    <div className="fade-in-soft fade-delay-1 sketch-card rounded-[1.5rem] border border-black/10 bg-[#17120d] p-5 text-white">
+                    <div className="fade-in-soft fade-delay-1 rounded-[1.5rem] border border-black/10 bg-[#17120d] p-5 text-white">
 
                         <h3 className="text-3xl font-extrabold leading-none">Sem checkout. Sem pressão.</h3>
                         <div className="mt-7 space-y-4 text-sm text-white/70">
