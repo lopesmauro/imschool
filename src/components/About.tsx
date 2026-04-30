@@ -1,101 +1,110 @@
-import aboutImage from "../assets/aboutus.jpeg";
-import { ChevronLeft, ChevronRight, RotateCw, Lock } from "lucide-react";
+import website from "../assets/website.png";
+import { BrainCircuit, SlidersHorizontal, WandSparkles } from "lucide-react";
 
 const AboutUs = () => {
+  const features = [
+    {
+      icon: SlidersHorizontal,
+      title: "Rota personalizada",
+      text: "Nível, rotina e objetivo entram na recomendação.",
+    },
+    {
+      icon: WandSparkles,
+      title: "Método prático",
+      text: "Foco em fala, escuta e estrutura sem excesso.",
+    },
+    {
+      icon: BrainCircuit,
+      title: "Acompanhamento",
+      text: "Você entende o que priorizar antes de começar.",
+    },
+  ];
+
+  const points = [
+    {
+      title: "Criar o diagnóstico",
+      text: "Você conta onde está, o que tentou antes e onde quer chegar.",
+    },
+    {
+      title: "Definir prioridades",
+      text: "A conversa separa urgência real, habilidade principal e rotina possível.",
+    },
+    {
+      title: "Escolher o caminho",
+      text: "Depois vem a recomendação: prática, estrutura, conversação ou base.",
+    },
+  ];
 
   return (
-    <section id="sobre" className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-amber-50/30 to-white overflow-hidden">
-      <div className="container mx-auto px-6 sm:px-10 lg:px-20 max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
-          {/* Left Side - Conteúdo */}
-          <div className="order-1 lg:order-1 text-center lg:text-left flex flex-col justify-center">
-            <p className="text-yellow-600 uppercase tracking-wide font-semibold mb-3 text-sm sm:text-base">
-              Sobre Nós
+    <section id="sobre" className="grain-overlay relative overflow-hidden bg-[#0f0d0b] py-16 text-white sm:py-20 lg:py-24">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(207,95,43,.18),transparent_28rem),radial-gradient(circle_at_82%_18%,rgba(185,223,244,.11),transparent_26rem)]" />
+      <div className="paper-dot absolute -left-8 top-20 h-36 w-36 rounded-full opacity-20" />
+      <div className="container mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
+        <div className="fade-in mb-10 grid gap-8 lg:grid-cols-[.62fr_1fr] lg:items-start">
+          <div className="fade-in">
+            <p className="mb-4 inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.22em] text-[#ffdc58]">
+              Método ImSchool
             </p>
-
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-snug sm:leading-tight">
-              Transformando vidas através da educação
+            <h2 className="font-editorial text-4xl leading-[0.95] text-white sm:text-5xl lg:text-[4.2rem]">
+              <span className="font-editorial-italic">Sobre</span> nós.
             </h2>
-
-            <div className="flex flex-col gap-3 mb-8 sm:mb-10">
-              <div className="flex items-start gap-4 sm:gap-5 text-left">
-                <div>
-                  <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
-                    A imschool nasceu da vontade de transformar o ensino de inglês no Brasil. Acreditamos que aprender um idioma deve ser uma experiência natural, envolvente e adaptada às necessidades de cada aluno.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 sm:gap-5 text-left">
-                <div>
-                  <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
-                    Nossa plataforma combina tecnologia de ponta com metodologias pedagógicas comprovadas, oferecendo aulas ao vivo, materiais interativos e acompanhamento personalizado.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 sm:gap-5 text-left">
-                <div>
-                  <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
-                    Com professores qualificados e uma comunidade ativa de estudantes, criamos o ambiente ideal para você conquistar a fluência.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
-
-          {/* Right Side - Imagem dentro do navegador */}
-          <div className="relative flex justify-center items-center order-2 lg:order-2">
-            <div className="absolute -inset-3 sm:-inset-4 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-3xl shadow-2xl transform rotate-1 sm:rotate-2 scale-105"></div>
-
-            {/* Navegador simulado estilo Chrome macOS */}
-            <div className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-white dark:bg-gray-900">
-              {/* Barra superior: Botões de controle + Aba */}
-              <div className="flex items-center gap-3 px-4 py-2.5 bg-gray-100 border-b border-gray-200 dark:bg-gray-900/80 dark:border-gray-700">
-                {/* Botões de Controle do macOS */}
-                <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors" />
-                  <div className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-600 transition-colors" />
+          <div className="grid gap-4 sm:grid-cols-3">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div key={feature.title} className={`fade-in border-l border-white/14 pl-5 ${index === 1 ? "fade-delay-1" : index === 2 ? "fade-delay-2" : ""}`}>
+                  <Icon className="mb-5 h-5 w-5 text-white/72" />
+                  <h3 className="mb-2 text-sm font-extrabold text-white">{feature.title}</h3>
+                  <p className="text-sm font-medium leading-relaxed text-white/48">{feature.text}</p>
                 </div>
+              );
+            })}
+          </div>
+        </div>
 
-                {/* Aba ativa */}
-                <div className="flex-1 flex items-center gap-2 bg-white rounded-t-lg px-4 py-1.5 max-w-xs shadow-sm dark:bg-gray-900 dark:text-white">
-                  <Lock className="w-3 h-3 text-gray-500 dark:text-gray-300" />
-                  <span className="text-xs text-gray-700 truncate dark:text-white">imschool</span>
-                </div>
-              </div>
-
-              {/* Barra de endereço */}
-              <div className="flex items-center gap-3 px-4 py-3 bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-                {/* Botões de navegação */}
-                <div className="flex items-center gap-1">
-                  <button className="p-1.5 rounded-full hover:bg-gray-100 transition-colors dark:hover:bg-gray-700">
-                    <ChevronLeft className="w-4 h-4 text-gray-600 dark:text-gray-300" />
-                  </button>
-                  <button className="p-1.5 rounded-full hover:bg-gray-100 transition-colors dark:hover:bg-gray-700">
-                    <ChevronRight className="w-4 h-4 text-gray-400 dark:text-gray-500" />
-                  </button>
-                  <button className="p-1.5 rounded-full hover:bg-gray-100 transition-colors ml-1 dark:hover:bg-gray-700">
-                    <RotateCw className="w-4 h-4 text-gray-600 dark:text-gray-300" />
-                  </button>
-                </div>
-
-                {/* Barra de URL */}
-                <div className="flex-1 flex items-center gap-2 bg-gray-100 rounded-full px-4 py-2 hover:bg-gray-200 transition-colors dark:bg-gray-800 dark:hover:bg-gray-700">
-                  <Lock className="w-4 h-4 text-gray-500 dark:text-gray-300" />
-                  <span className="text-sm text-gray-700 dark:text-gray-400">app.imschool.com.br</span>
+        <div className="fade-in-soft fade-delay-2 relative overflow-hidden rounded-[1.7rem] border border-white/12 bg-[#12100d] p-4 shadow-[0_40px_110px_-70px_rgba(0,0,0,.95)] sm:p-5 lg:p-6">
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/50 to-transparent" />
+          <div className="relative grid gap-6 lg:grid-cols-[.34fr_.66fr]">
+            <aside className="relative z-10">
+              <div className="mb-8 flex items-center gap-3">
+                <div>
+                  <p className="text-xl font-bold leading-none">Nossa Plataforma</p>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-white/42">Diagnóstico de rota</p>
                 </div>
               </div>
 
-              {/* Conteúdo - Imagem */}
-              <div className="relative w-full h-[calc(100%-88px)] overflow-hidden">
-                <img
-                  src={aboutImage}
-                  alt="Nossa história e método de ensino"
-                  className="w-full h-full object-cover object-center"
-                />
+              <p className="max-w-xs text-sm font-medium leading-relaxed text-white/58">
+                A página vira uma triagem visual: menos promessa solta, mais contexto para indicar um caminho de estudo que caiba na vida real.
+              </p>
+
+              <a href="#consultoria-form" className="mt-8 inline-flex rounded-full border border-white/18 px-4 py-2 text-xs font-extrabold text-white transition-colors hover:bg-white hover:text-black">
+                Abrir diagnóstico
+              </a>
+
+              <div className="mt-14 divide-y divide-white/10 border-y border-white/10">
+                {points.map((point, index) => {
+                  return (
+                    <div key={point.title} className={`py-4 ${index === points.length - 1 ? "text-white" : "text-white/76"}`}>
+                      <div className="flex items-center gap-3">
+                        <p className="text-sm font-extrabold">{point.title}</p>
+                      </div>
+                      {index === points.length - 1 && (
+                        <p className="mt-3 text-xs font-medium leading-relaxed text-white/46">{point.text}</p>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
+            </aside>
+
+            <div className="relative min-h-[360px] overflow-hidden rounded-[1.2rem] bg-black lg:min-h-[560px]">
+              <img
+                src={website}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-60"
+              />
+
             </div>
           </div>
         </div>

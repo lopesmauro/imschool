@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 /* ✅ Novo formato com @theme */ 
@@ -104,7 +104,184 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(158, 207, 236, 0.2), transparent 28rem),
+    radial-gradient(circle at 86% 34%, rgba(255, 221, 116, 0.22), transparent 24rem),
+    #fbf8f1;
+  color: #191612;
+  text-rendering: geometricPrecision;
+}
+
+.font-editorial {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+}
+
+.font-editorial-italic {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.gold-reflection {
+  display: inline-block;
+  color: #f2c94c;
+  padding-right: .05em;
+  padding-bottom: .06em;
+  background: linear-gradient(
+    100deg,
+    #f2c94c 0%,
+    #f2c94c 36%,
+    #ffe27a 43%,
+    #fff8d7 49%,
+    #ffffff 50%,
+    #fff2a8 54%,
+    #f2c94c 64%,
+    #f2c94c 100%
+  );
+  background-size: 360% 100%;
+  background-position: 145% 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-reflection 3.2s linear infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #ffdc58;
+  color: #161412;
+}
+
+.page-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.grain-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .18;
+  mix-blend-mode: soft-light;
+  background-image:
+    linear-gradient(115deg, rgba(255,255,255,.12) 0 1px, transparent 1px 16px),
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,.18), transparent 18rem);
+}
+
+.paper-dot {
+  background-image: radial-gradient(rgba(25, 22, 18, .12) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+.sketch-card {
+  box-shadow:
+    0 22px 60px -36px rgba(36, 31, 23, .45),
+    inset 0 0 0 1px rgba(25, 22, 18, .08);
+}
+
+.hero-reveal {
+  animation: hero-reveal .9s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.hero-reveal-delay {
+  animation: hero-reveal .9s cubic-bezier(.2, .8, .2, 1) .14s both;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.fade-in-soft {
+  opacity: 0;
+  transform: translateY(12px) scale(.985);
+}
+
+.fade-in.is-visible {
+  animation: section-fade-in .82s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.fade-in-soft.is-visible {
+  animation: section-fade-in-soft .95s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.fade-delay-1 {
+  animation-delay: .08s;
+}
+
+.fade-delay-2 {
+  animation-delay: .16s;
+}
+
+.fade-delay-3 {
+  animation-delay: .24s;
+}
+
+.fade-delay-4 {
+  animation-delay: .32s;
+}
+
+.float-note {
+  animation: float-note 7s ease-in-out infinite;
+}
+
+@keyframes hero-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes section-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes section-fade-in-soft {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gold-reflection {
+  0%, 14% {
+    background-position: 145% 0;
+  }
+  86%, 100% {
+    background-position: -145% 0;
+  }
+}
+
+@keyframes float-note {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
 }
 
 .shimmer-text {
@@ -146,4 +323,18 @@ body {
   }
 }
 
-
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .fade-in-soft,
+  .fade-in.is-visible,
+  .fade-in-soft.is-visible,
+  .hero-reveal,
+  .hero-reveal-delay,
+  .float-note,
+  .shimmer-text,
+  .gold-reflection {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
