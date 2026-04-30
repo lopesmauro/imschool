@@ -31,7 +31,7 @@ const AboutUs = () => {
     },
     {
       title: "Escolher o caminho",
-      text: "Depois vem a recomendação: prática, estrutura, conversação ou base.",
+      text: "Depois vem a recomendação: prática, estrutura, conversação e base.",
     },
   ];
 
