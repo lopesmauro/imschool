@@ -31,7 +31,7 @@ const Navbar = () => {
                         </nav>
 
                         <a 
-                            href="#consultoria-form"
+                            href="#contato"
                             className="inline-flex min-h-10 items-center gap-2 whitespace-nowrap rounded-full bg-[#cf5f2b] px-4 py-2 text-sm font-extrabold text-white shadow-[0_16px_36px_-22px_rgba(207,95,43,.9)] transition-all hover:-translate-y-0.5 hover:bg-[#ef7941] sm:px-5"
                         >
                             <span className="hidden min-[360px]:inline">Começar</span>

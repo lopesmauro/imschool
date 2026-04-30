@@ -27,7 +27,7 @@ const Hero = () => {
 
             <div className="hero-reveal-delay mt-7 flex flex-col gap-3 sm:flex-row">
               <a
-                href="#consultoria-form"
+                href="#contato"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#cf5f2b] px-6 py-3 text-sm font-extrabold text-white transition-all hover:-translate-y-0.5 hover:bg-[#ef7941]"
               >
                 Fazer diagnóstico

@@ -5,7 +5,7 @@ const Footer = () => {
       links: [
         { label: "Método", href: "#sobre" },
         { label: "Processo", href: "#processo" },
-        { label: "Cadastro", href: "#consultoria-form" },
+        { label: "Cadastro", href: "#contato" },
       ],
     },
     {
