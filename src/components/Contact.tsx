@@ -1,112 +1,172 @@
+import { useState } from "react";
+import type { FormEvent } from "react";
+import { ArrowUpRight, Send } from "lucide-react";
+
 const Contact = () => {
     const phoneNumber = "+5492214098715";
-    const message = "💬 Oi! Tenho algumas dúvidas sobre o curso e gostaria de conversar com alguém da equipe.";
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const googleFormUrl = "";
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        goal: "",
+        challenge: "",
+        availability: "",
+    });
+
+    const updateField = (field: keyof typeof form, value: string) => {
+        setForm((current) => ({ ...current, [field]: value }));
+    };
+
+    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        const message = [
+            "Oi! Quero começar meu diagnóstico gratuito de inglês.",
+            "",
+            `Nome: ${form.name}`,
+            `Email: ${form.email}`,
+            `Telefone: ${form.phone}`,
+            `Objetivo: ${form.goal}`,
+            `Maior dificuldade: ${form.challenge}`,
+            `Melhor horário: ${form.availability}`,
+        ].join("\n");
+
+        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+    };
 
     return (
         <section
             id="contato"
-            className="relative py-28 bg-gradient-to-br from-yellow-50 via-white to-yellow-50 overflow-hidden"
+            className="relative overflow-hidden bg-[#fbf8f1] py-16 sm:py-20 lg:py-24"
         >
-            {/* Ornamentos suaves */}
-            <div className="absolute inset-0 pointer-events-none z-0">
-                <div className="absolute -top-20 -left-20 w-72 h-72 bg-yellow-100 rounded-full blur-3xl opacity-30"></div>
-                <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-yellow-200 rounded-full blur-3xl opacity-20"></div>
-            </div>
-
-            <div className="relative container mx-auto px-20 md:px-20 z-10 max-w-7xl">
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
-                    {/* COLUNA ESQUERDA */}
-                    <div className="flex-1">
-                        <div className="max-w-xl mb-10">
-                            <p className="text-yellow-600 uppercase tracking-widest text-sm font-semibold">
-                                Comece agora
-                            </p>
-                            <h2 className="text-4xl md:text-5xl font-bold mt-3 text-gray-900">
-                                Realize sua <span className="text-yellow-500">Inscrição</span>
-                            </h2>
-                            <p className="text-lg md:text-xl text-gray-700 mt-5 leading-relaxed">
-                                Dê o primeiro passo na sua jornada com o inglês. Fale com um de
-                                nossos consultores clicando no botão abaixo ou escaneie o QR Code.
-                            </p>
-                        </div>
-
-                        {/* Botões de Ação */}
-                        <div className="mb-6 flex flex-wrap gap-4">
-                            <a
-                                href={whatsappUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="relative inline-block px-10 py-5 text-lg font-normal text-black rounded-2xl shadow-xl bg-yellow-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-yellow-600"
-                            >
-                                Falar no WhatsApp
-                                <span className="absolute -bottom-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full blur-sm opacity-40"></span>
-                            </a>
-
-                            <a
-                                href="#precos"
-                                className="inline-block px-10 py-5 text-lg font-semibold text-yellow-600 rounded-2xl border-2 border-yellow-500 transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-50"
-                            >
-                                Ver os Valores
-                            </a>
-                        </div>
-                        
-                        <p className="text-sm text-gray-500  mb-8">
-                            Atendimento imediato e personalizado para tirar suas dúvidas.
+            <div className="absolute left-0 top-0 h-28 w-full " />
+            <div className="paper-dot absolute right-[-3rem] top-24 h-44 w-44 rounded-full opacity-50" />
+            <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
+                <div className="fade-in mb-10 grid gap-5 lg:grid-cols-[.72fr_1fr] lg:items-end">
+                    <div>
+                        <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-[#b85228]">
+                            Começar
                         </p>
-
-                        {/* Benefícios rápidos */}
-                        <div className="space-y-2 text-sm text-gray-700 mb-8">
-                            <p>✔ Atendimento 24h com consultores especializados</p>
-                            <p>✔ Informações completas sobre cursos e preços</p>
-                            <p>✔ Suporte contínuo mesmo após a inscrição</p>
-                        </div>
-
-                        {/* Info extra de suporte */}
-                        <div className="flex items-start gap-3 text-sm text-gray-700">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-5 h-5 text-yellow-500 mt-0.5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M8 10h.01M12 14h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8s-9-3.582-9-8 4.03-8 9-8 9 3.582 9 8z"
-                                />
-                            </svg>
-                            <p>
-                                <strong className="font-medium text-gray-900">Suporte dedicado:</strong> nosso time te acompanha do primeiro contato até a fluência.
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* COLUNA DIREITA - QR CODE GRANDE */}
-                    <div className="flex-1 flex flex-col items-center justify-center">
-                        <div className="w-full p-8 rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                            <img
-                                src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(
-                                    whatsappUrl
-                                )}&bgcolor=FFFFFF&color=D97706`}
-                                alt="QR Code para WhatsApp"
-                                className="w-full h-full object-contain rounded-xl"
-                            />
-                        </div>
-                        <div className="mt-6 text-center space-y-1">
-                            <p className="text-base text-gray-700 font-medium">Escaneie com a câmera</p>
-                            <p className="text-sm text-gray-500">Acesso direto ao WhatsApp</p>
-                        </div>
+                        <h2 className="font-editorial text-4xl leading-none text-black sm:text-5xl lg:text-[3.65rem]">
+                            Comece seu <span className="font-editorial-italic">diagnóstico</span> de inglês agora.
+                        </h2>
                     </div>
                 </div>
 
-                {/* Microcopy final */}
-                <div className="text-center mt-16">
-                    <p className="text-xs text-gray-400">
-                        📩 Suporte exclusivo via WhatsApp. Clique ou escaneie para iniciar sua conversa.
-                    </p>
+                <div className="grid gap-5 lg:grid-cols-[.75fr_1.25fr] lg:items-start">
+                    <div className="fade-in-soft fade-delay-1 rounded-[1.5rem] border border-black/10 bg-[#17120d] p-5 text-white">
+
+                        <h3 className="text-3xl font-extrabold leading-none">Gratuito. Sem compromisso.</h3>
+                        <div className="mt-7 space-y-4 text-sm text-white/70">
+                            <div className="flex gap-3 border-t border-white/10 pt-4">
+                                <span className="font-extrabold text-white">01</span>
+                                <p>Sem pagamento e sem pressão de venda.</p>
+                            </div>
+                            <div className="flex gap-3 border-t border-white/10 pt-4">
+                                <span className="font-extrabold text-white">02</span>
+                                <p>Você não escolhe plano nesta etapa.</p>
+                            </div>
+                            <div className="flex gap-3 border-t border-white/10 pt-4">
+                                <span className="font-extrabold text-white">03</span>
+                                <p>O envio abre automaticamente o WhatsApp com suas respostas.</p>
+                            </div>
+                        </div>
+
+                        {googleFormUrl && (
+                            <a
+                                href={googleFormUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-8 inline-flex items-center gap-2 border-b border-white pb-1 text-sm font-semibold text-white"
+                            >
+                                Preencher pelo Google Forms
+                                <ArrowUpRight className="w-4 h-4" />
+                            </a>
+                        )}
+                    </div>
+
+                    <form id="consultoria-form" onSubmit={handleSubmit} className="fade-in-soft fade-delay-2 min-w-0 rounded-[1.5rem] border border-black/10 bg-white p-4 sm:p-6">
+
+                        <div className="grid sm:grid-cols-2 gap-4">
+                            <label className="space-y-2">
+                                <span className="text-sm font-extrabold text-stone-800">Nome</span>
+                                <input
+                                    required
+                                    value={form.name}
+                                    onChange={(event) => updateField("name", event.target.value)}
+                                    className="w-full rounded-[.9rem] border border-black/10 bg-[#fbf8f1] px-4 py-3 outline-none transition focus:border-[#cf5f2b] focus:bg-white"
+                                    placeholder="Seu nome"
+                                />
+                            </label>
+
+                            <label className="space-y-2">
+                                <span className="text-sm font-extrabold text-stone-800">Telefone</span>
+                                <input
+                                    required
+                                    value={form.phone}
+                                    onChange={(event) => updateField("phone", event.target.value)}
+                                    className="w-full rounded-[.9rem] border border-black/10 bg-[#fbf8f1] px-4 py-3 outline-none transition focus:border-[#cf5f2b] focus:bg-white"
+                                    placeholder="WhatsApp"
+                                />
+                            </label>
+                        </div>
+
+                        <label className="block space-y-2 mt-4">
+                            <span className="text-sm font-extrabold text-stone-800">Email</span>
+                            <input
+                                required
+                                type="email"
+                                value={form.email}
+                                onChange={(event) => updateField("email", event.target.value)}
+                                className="w-full rounded-[.9rem] border border-black/10 bg-[#fbf8f1] px-4 py-3 outline-none transition focus:border-[#cf5f2b] focus:bg-white"
+                                placeholder="voce@email.com"
+                            />
+                        </label>
+
+                        <label className="block space-y-2 mt-4">
+                            <span className="text-sm font-extrabold text-stone-800">Qual seu objetivo com o inglês?</span>
+                            <select
+                                required
+                                value={form.goal}
+                                onChange={(event) => updateField("goal", event.target.value)}
+                                className="w-full rounded-[.9rem] border border-black/10 bg-[#fbf8f1] px-4 py-3 outline-none transition focus:border-[#cf5f2b] focus:bg-white"
+                            >
+                                <option value="">Selecione uma opção</option>
+                                <option>Conversar com mais segurança</option>
+                                <option>Trabalho e reuniões</option>
+                                <option>Viagem ou mudança de país</option>
+                                <option>Retomar do básico</option>
+                                <option>Outro objetivo</option>
+                            </select>
+                        </label>
+
+                        <label className="block space-y-2 mt-4">
+                            <span className="text-sm font-extrabold text-stone-800">O que mais te trava hoje?</span>
+                            <textarea
+                                required
+                                rows={4}
+                                value={form.challenge}
+                                onChange={(event) => updateField("challenge", event.target.value)}
+                                className="w-full resize-none rounded-[.9rem] border border-black/10 bg-[#fbf8f1] px-4 py-3 outline-none transition focus:border-[#cf5f2b] focus:bg-white"
+                                placeholder="Conte rapidamente sua dificuldade principal"
+                            />
+                        </label>
+
+                        <div className="mt-6">
+                            <button
+                                type="submit"
+                                className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-black px-6 py-3 font-extrabold text-white transition-all hover:-translate-y-0.5 hover:bg-stone-800 sm:w-auto"
+                            >
+                                Iniciar diagnóstico
+                                <Send className="w-4 h-4" />
+                            </button>
+                        </div>
+
+                        <p className="mt-4 text-xs text-stone-500">
+                            Depois da análise, você recebe a recomendação mais adequada para evoluir no inglês.
+                        </p>
+                    </form>
                 </div>
             </div>
         </section>

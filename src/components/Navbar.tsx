@@ -4,73 +4,95 @@ import Logo from "./Logo";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const phoneNumber = "+5492214098715";
-
-    const message = "🎓 Olá! Quero fazer minha matrícula e começar a estudar inglês com vocês. Pode me ajudar com o processo?";
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const navItems = [
+        { label: "Método", href: "#sobre" },
+        { label: "Aulas", href: "#sobre" },
+        { label: "Processo", href: "#processo" },
+        { label: "Diagnóstico", href: "#contato" },
+        { label: "Histórias", href: "#depoimentos" },
+        { label: "Cadastro", href: "#contato" },
+    ];
+    const leftNavItems = navItems.slice(0, 3);
+    const rightNavItems = navItems.slice(3);
 
     return (
-        <header className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
-            <div className="container mx-auto px-6 sm:px-10 lg:px-20 py-4 max-w-7xl">
-                <div className="flex items-center justify-between">
-                    <Logo />
-
-                    {/* Desktop e Mobile Actions agrupados à direita */}
-                    <div className="flex items-center gap-2 sm:gap-4">
-                        {/* Links Desktop - Escondidos no Mobile */}
-                        <nav className="hidden md:flex items-center space-x-1">
-                            {["Sobre", "Cursos", "Depoimentos", "Contato"].map((item) => (
+        <header className="absolute left-0 top-10 z-50 w-full">
+            <div className="container mx-auto max-w-7xl px-4 py-4 sm:px-8 lg:px-12">
+                <div className="relative flex min-h-12 items-center justify-between lg:min-h-14">
+                    <nav className="hidden w-[calc(50%_-_96px)] max-w-[470px] lg:block">
+                        <div className="grid h-11 grid-cols-3 items-center text-white">
+                            {leftNavItems.map((item) => (
                                 <a
-                                    key={item}
-                                    href={`#${item.toLowerCase()}`}
-                                    className="relative px-4 py-2 text-black hover:text-yellow-500 transition-all duration-300 group font-medium"
+                                    key={item.label}
+                                    href={item.href}
+                                    className="group inline-flex h-9 min-w-0 items-center justify-center px-3 text-center text-[0.72rem] font-extrabold uppercase tracking-[0.14em] text-white/72 transition-colors hover:text-white"
                                 >
-                                    {item}
-                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
+                                    <span className="relative">
+                                        {item.label}
+                                        <span className="absolute -bottom-2 left-1/2 h-px w-0 -translate-x-1/2 bg-[#ffdc58] transition-all duration-300 group-hover:w-full" />
+                                    </span>
                                 </a>
                             ))}
-                        </nav>
+                        </div>
+                    </nav>
 
-                        {/* Botão Matricule-se - Sempre visível */}
-                        <a 
-                            href={whatsappUrl} 
-                            target="_blank"
-                            className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-4 py-2 sm:px-6 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base shadow-sm whitespace-nowrap"
-                        >
-                            Matricule-se
-                        </a>
-
-                        {/* Botão hambúrguer - Mobile */}
-                        <button
-                            onClick={() => setMenuOpen(!menuOpen)}
-                            className="md:hidden text-black hover:text-yellow-500 transition-all duration-300 p-1"
-                            aria-label="Menu"
-                        >
-                            {/* Troca de ícones com leve rotação */}
-                            <div className="transition-transform duration-300 ease-in-out">
-                                {menuOpen ? <X size={28} className="rotate-90" /> : <Menu size={28} />}
-                            </div>
-                        </button>
+                    <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
+                        <Logo />
                     </div>
+
+                    <button
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        className="relative z-20 p-2 text-white transition-colors hover:text-[#ffdc58] lg:hidden"
+                        aria-label="Menu"
+                    >
+                        <div className="transition-transform duration-300 ease-in-out">
+                            {menuOpen ? <X size={26} /> : <Menu size={26} />}
+                        </div>
+                    </button>
+
+                    <nav className="hidden w-[calc(50%_-_96px)] max-w-[470px] lg:block">
+                        <div className="grid h-11 grid-cols-3 items-center text-white">
+                            {rightNavItems.map((item) => (
+                                <a
+                                    key={item.label}
+                                    href={item.href}
+                                    className="group inline-flex h-9 min-w-0 items-center justify-center px-3 text-center text-[0.72rem] font-extrabold uppercase tracking-[0.14em] text-white/72 transition-colors hover:text-white"
+                                >
+                                    <span className="relative">
+                                        {item.label}
+                                        <span className="absolute -bottom-2 left-1/2 h-px w-0 -translate-x-1/2 bg-[#ffdc58] transition-all duration-300 group-hover:w-full" />
+                                    </span>
+                                </a>
+                            ))}
+                        </div>
+                    </nav>
+
+                    <div className="h-10 w-10 lg:hidden" aria-hidden="true" />
                 </div>
 
-                {/* Menu mobile com transição suave */}
                 <div 
-                    className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+                    className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
                         menuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"
                     }`}
                 >
-                    <div className="bg-white rounded-xl shadow-lg p-6 space-y-4 border border-gray-100">
-                        {["Sobre", "Cursos", "Depoimentos", "Contato"].map((item) => (
+                    <div className="space-y-3 rounded-[1.35rem] border border-white/18 bg-[#17120d]/88 p-5 shadow-2xl backdrop-blur-xl">
+                        {navItems.map((item) => (
                             <a
-                                key={item}
-                                href={`#${item.toLowerCase()}`}
+                                key={item.label}
+                                href={item.href}
                                 onClick={() => setMenuOpen(false)}
-                                className="block text-lg text-black hover:text-yellow-500 font-medium transition-colors border-b border-gray-50 pb-2 last:border-0"
+                                className="block border-b border-white/10 pb-2 text-base font-bold text-white/86 transition-colors last:border-0 hover:text-[#ffdc58]"
                             >
-                                {item}
+                                {item.label}
                             </a>
                         ))}
+                        <a
+                            href="#contato"
+                            onClick={() => setMenuOpen(false)}
+                            className="mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-[#cf5f2b] px-5 py-3 text-sm font-extrabold text-white shadow-[0_18px_38px_-26px_rgba(207,95,43,.95)] transition-all hover:-translate-y-0.5 hover:bg-[#ef7941]"
+                        >
+                            Começar diagnóstico
+                        </a>
                     </div>
                 </div>
             </div>

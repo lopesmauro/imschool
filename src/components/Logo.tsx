@@ -1,26 +1,14 @@
 const Logo = () => {
     return (
-        <div className="flex items-center space-x-3 group">
-            <div className="relative">
-                <div className="w-16 h-16 rounded-xl flex items-center justify-center">
-                    <img
-                        src="/logo-ims.png"
-                        alt="Logo ImSchool"
-                        width={50}
-                        height={50}
-                        className="object-contain"
-                    />
-                </div>
-            </div>
-            <div className="flex flex-col">
-                <span className="text-2xl font-bold text-yellow-500 bg-clip-text">
-                    <span className="text-black">im</span>school
-                </span>
-                <span className="text-xs text-muted-foreground">
-                    English Academy
-                </span>
-            </div>
-        </div>
+        <a href="#" className="group flex min-w-0 items-center">
+            <img
+                src="/imlogo.png"
+                alt="Logo ImSchool"
+                width={320}
+                height={104}
+                className="h-auto w-[100px] object-contain drop-shadow-[0_10px_24px_rgba(0,0,0,.45)] sm:w-[145px] lg:w-[120px]"
+            />
+        </a>
     )
 }
 
