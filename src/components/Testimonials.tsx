@@ -4,18 +4,18 @@ const Testimonials = () => {
     const testimonials = [
         {
             name: "Mariana",
-            role: "Reuniões no trabalho",
-            text: "Eu já tinha estudado antes, mas não sabia por onde retomar. A conversa deixou claro o que eu precisava priorizar primeiro."
+            role: "Retomada dos estudos",
+            text: "Eu já tinha estudado antes, mas não sabia por onde retomar. A conversa deixou claro o que eu precisava priorizar."
         },
         {
             name: "Lucas",
             role: "Rotina corrida",
-            text: "Gostei porque não foi uma proposta pronta. Falei da minha rotina e recebi uma orientação que cabia na minha semana."
+            text: "Gostei porque não foi uma proposta pronta. Falei da minha rotina e recebi uma orientação que realmente cabia na minha semana."
         },
         {
             name: "Carla",
-            role: "Inglês para viagem",
-            text: "Eu cheguei cheia de dúvidas. Depois da consultoria, entendi qual caminho seguir e parei de trocar de método toda hora."
+            role: "Direção clara",
+            text: "Depois da consultoria, parei de trocar de método toda hora. Finalmente tenho um caminho claro."
         }
     ];
 
@@ -29,7 +29,7 @@ const Testimonials = () => {
                             Experiências
                         </p>
                         <h2 className="font-editorial text-4xl leading-none text-black sm:text-5xl lg:text-[3.45rem]">
-                            Quando existe <span className="font-editorial-italic">contexto</span>, a conversa rende mais.
+                            Alunos que encontraram um <span className="font-editorial-italic">caminho</span> mais claro.
                         </h2>
                     </div>
 

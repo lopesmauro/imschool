@@ -27,18 +27,18 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 sm:px-10 lg:grid-cols-[1.25fr_1fr] lg:px-12 lg:py-20">
-        <div>
-          <a href="#" className="inline-flex items-center">
+        <div className="text-center sm:text-left">
+          <a href="#" className="inline-flex items-center justify-center sm:justify-start">
             <img
               src="/imlogo.png"
               alt="Logo ImSchool"
               width={320}
               height={104}
-              className="h-auto w-[210px] object-contain sm:w-[250px]"
+              className="h-auto w-[clamp(9.5rem,34vw,12.75rem)] object-contain"
             />
           </a>
 
-          <p className="mt-6 max-w-md text-lg font-normal leading-relaxed text-white/72">
+          <p className="mx-auto mt-6 max-w-md text-base font-normal leading-relaxed text-white/72 sm:mx-0 sm:text-lg">
             © 2025. Consultoria de inglês para quem quer clareza antes de escolher o próximo passo.
           </p>
         </div>

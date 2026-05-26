@@ -18,7 +18,8 @@ const Hero = () => {
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(420px,500px)] lg:items-end">
           <div className="max-w-2xl">
 
-            <h1 className="hero-reveal font-editorial max-w-[12ch] text-[3.7rem] leading-[0.98] tracking-normal text-white sm:text-7xl lg:text-[5.65rem]">
+            <h1 className="hero-reveal font-editorial max-w-[13ch] text-[3.35rem] leading-[0.98] tracking-normal text-white sm:text-7xl lg:text-[5.2rem]">
+              Aprenda{" "}
               <Shimmer
                 as="span"
                 duration={1.1}
@@ -27,13 +28,13 @@ const Hero = () => {
                 baseGradient="linear-gradient(110deg, #f8d85a 0%, #f2c94c 48%, #e88a2f 100%)"
                 className="font-editorial-italic pb-[0.07em] [--color-background:#fff] drop-shadow-[0_8px_18px_rgba(0,0,0,.2)]"
               >
-                Inglês
+                inglês
               </Shimmer>{" "}
-              certo. Sem chute.
+              do jeito certo. Sem perder tempo.
             </h1>
 
             <p className="hero-reveal-delay mt-5 max-w-xl text-base font-medium leading-relaxed text-white/86 sm:text-lg">
-              Uma conversa curta para mapear seu nível, destravar o objetivo certo e indicar o caminho antes de qualquer matrícula.
+              Pare de tentar adivinhar o que estudar. Comece com um diagnóstico completo do seu nível de inglês, dos seus objetivos e da sua rotina.
             </p>
 
             <div className="hero-reveal-delay mt-7 flex flex-col gap-3 sm:flex-row">
@@ -41,7 +42,7 @@ const Hero = () => {
                 href="#contato"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#cf5f2b] px-6 py-3 text-sm font-extrabold text-white transition-all hover:-translate-y-0.5 hover:bg-[#ef7941]"
               >
-                Fazer diagnóstico
+                Iniciar diagnóstico
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>

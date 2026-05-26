@@ -6,32 +6,32 @@ const AboutUs = () => {
     {
       icon: SlidersHorizontal,
       title: "Rota personalizada",
-      text: "Nível, rotina e objetivo entram na recomendação.",
+      text: "Seu plano considera nível atual, tempo disponível e objetivo com o inglês.",
     },
     {
       icon: WandSparkles,
-      title: "Método prático",
-      text: "Foco em fala, escuta e estrutura sem excesso.",
+      title: "Aulas focadas",
+      text: "Conversação, escuta e estrutura aplicada para usar o inglês de verdade.",
     },
     {
       icon: BrainCircuit,
-      title: "Acompanhamento",
-      text: "Você entende o que priorizar antes de começar.",
+      title: "Direção clara",
+      text: "Você entende o que priorizar, o que evitar e qual é o próximo passo.",
     },
   ];
 
   const points = [
     {
-      title: "Criar o diagnóstico",
-      text: "Você conta onde está, o que tentou antes e onde quer chegar.",
+      title: "Diagnóstico personalizado",
+      text: "Uma conversa estratégica para entender nível, objetivos, dificuldades e rotina.",
     },
     {
-      title: "Definir prioridades",
-      text: "A conversa separa urgência real, habilidade principal e rotina possível.",
+      title: "Recomendação ideal",
+      text: "A análise aponta o curso ou formato de aulas mais adequado para o seu momento.",
     },
     {
-      title: "Escolher o caminho",
-      text: "Depois vem a recomendação: prática, estrutura, conversação e base.",
+      title: "Inglês na prática",
+      text: "Nada de aula padrão: a rota combina fala, escuta e estrutura sem complicação.",
     },
   ];
 
@@ -46,7 +46,7 @@ const AboutUs = () => {
               Método ImSchool
             </p>
             <h2 className="font-editorial text-4xl leading-[0.95] text-white sm:text-5xl lg:text-[4.2rem]">
-              <span className="font-editorial-italic">Sobre</span> nós.
+              Inglês na <span className="font-editorial-italic">prática</span>, sem complicação.
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
@@ -70,12 +70,12 @@ const AboutUs = () => {
               <div className="mb-8 flex items-center gap-3">
                 <div>
                   <p className="text-xl font-bold leading-none">Nossa Plataforma</p>
-                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-white/42">Diagnóstico de rota</p>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-white/42">Diagnóstico personalizado</p>
                 </div>
               </div>
 
               <p className="max-w-xs text-sm font-medium leading-relaxed text-white/58">
-                A página vira uma triagem visual: menos promessa solta, mais contexto para indicar um caminho de estudo que caiba na vida real.
+                Antes de qualquer matrícula, você recebe uma direção clara: sem promessas vazias, sem método genérico e sem pressão para comprar.
               </p>
 
               <a href="#contato" className="mt-8 inline-flex rounded-full border border-white/18 px-4 py-2 text-xs font-extrabold text-white transition-colors hover:bg-white hover:text-black">

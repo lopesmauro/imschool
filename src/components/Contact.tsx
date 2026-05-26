@@ -22,7 +22,7 @@ const Contact = () => {
         event.preventDefault();
 
         const message = [
-            "Oi! Quero participar da consultoria de inglês.",
+            "Oi! Quero começar meu diagnóstico gratuito de inglês.",
             "",
             `Nome: ${form.name}`,
             `Email: ${form.email}`,
@@ -49,7 +49,7 @@ const Contact = () => {
                             Começar
                         </p>
                         <h2 className="font-editorial text-4xl leading-none text-black sm:text-5xl lg:text-[3.65rem]">
-                            Abra seu <span className="font-editorial-italic">diagnóstico</span> de inglês.
+                            Comece seu <span className="font-editorial-italic">diagnóstico</span> de inglês agora.
                         </h2>
                     </div>
                 </div>
@@ -57,19 +57,19 @@ const Contact = () => {
                 <div className="grid gap-5 lg:grid-cols-[.75fr_1.25fr] lg:items-start">
                     <div className="fade-in-soft fade-delay-1 rounded-[1.5rem] border border-black/10 bg-[#17120d] p-5 text-white">
 
-                        <h3 className="text-3xl font-extrabold leading-none">Sem checkout. Sem pressão.</h3>
+                        <h3 className="text-3xl font-extrabold leading-none">Gratuito. Sem compromisso.</h3>
                         <div className="mt-7 space-y-4 text-sm text-white/70">
                             <div className="flex gap-3 border-t border-white/10 pt-4">
                                 <span className="font-extrabold text-white">01</span>
-                                <p>Você não escolhe plano nesta página.</p>
+                                <p>Sem pagamento e sem pressão de venda.</p>
                             </div>
                             <div className="flex gap-3 border-t border-white/10 pt-4">
                                 <span className="font-extrabold text-white">02</span>
-                                <p>A recomendação vem depois da análise do seu momento.</p>
+                                <p>Você não escolhe plano nesta etapa.</p>
                             </div>
                             <div className="flex gap-3 border-t border-white/10 pt-4">
                                 <span className="font-extrabold text-white">03</span>
-                                <p>O envio abre o WhatsApp com tudo preenchido.</p>
+                                <p>O envio abre automaticamente o WhatsApp com suas respostas.</p>
                             </div>
                         </div>
 
@@ -158,13 +158,13 @@ const Contact = () => {
                                 type="submit"
                                 className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-black px-6 py-3 font-extrabold text-white transition-all hover:-translate-y-0.5 hover:bg-stone-800 sm:w-auto"
                             >
-                                Enviar cadastro
+                                Iniciar diagnóstico
                                 <Send className="w-4 h-4" />
                             </button>
                         </div>
 
                         <p className="mt-4 text-xs text-stone-500">
-                            O envio abre uma conversa no WhatsApp com suas respostas preenchidas.
+                            Depois da análise, você recebe a recomendação mais adequada para evoluir no inglês.
                         </p>
                     </form>
                 </div>

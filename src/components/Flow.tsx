@@ -9,22 +9,22 @@ const Flow = () => {
             icon: ClipboardList,
             image: criarImage,
             imageAlt: "Ilustração do cadastro inicial",
-            title: "Você se cadastra",
-            description: "Nome, email, telefone e algumas respostas sobre seu objetivo com o inglês.",
+            title: "Cadastro rápido",
+            description: "Você informa nome, WhatsApp, email e o principal objetivo com o inglês.",
         },
         {
             icon: MessagesSquare,
             image: lupaImage,
             imageAlt: "Ilustração da análise do perfil do aluno",
-            title: "Eu analiso seu momento",
-            description: "As respostas ajudam a entender sua urgência, seu nível e os bloqueios que aparecem na rotina.",
+            title: "Análise do seu perfil",
+            description: "Eu avalio seu nível, sua rotina e os bloqueios que travam o aprendizado.",
         },
         {
             icon: Compass,
             image: timeImage,
             imageAlt: "Ilustração da direção recomendada para estudo",
-            title: "A reunião vira direção",
-            description: "Na conversa, você recebe uma orientação clara e eu explico o melhor próximo passo.",
+            title: "Conversa estratégica",
+            description: "Você recebe um diagnóstico claro, um plano de ação e a melhor recomendação de curso ou aulas.",
         },
     ];
 
@@ -39,11 +39,11 @@ const Flow = () => {
                             Como funciona
                         </p>
                         <h2 className="font-editorial text-4xl leading-none sm:text-5xl lg:text-[3.1rem]">
-                            <span className="font-editorial-italic">Sequência</span> curta, com intenção em cada etapa.
+                            <span className="font-editorial-italic">Simples</span> e rápido, com direção desde o primeiro contato.
                         </h2>
                     </div>
                     <p className="max-w-2xl text-lg font-medium leading-relaxed text-white/62 lg:pb-1">
-                        Três passos simples para transformar um primeiro contato em uma conversa útil, com contexto e direção.
+                        Você não escolhe um plano nesta etapa. A recomendação vem depois da análise do seu perfil e da sua rotina.
                     </p>
                 </div>
 
