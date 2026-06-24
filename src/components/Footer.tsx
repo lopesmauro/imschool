@@ -19,11 +19,11 @@ const Footer = () => {
           <div>
             <a href="#" aria-label="Voltar ao início" className="inline-flex">
               <img
-                src="/imlogo.png"
+                src="/modern.png"
                 alt="Logo ImSchool"
                 width={320}
                 height={104}
-                className="h-auto w-24 object-contain sm:w-28"
+                className="h-auto w-16 object-contain sm:w-18"
               />
             </a>
             <p className="mt-5 max-w-sm text-sm font-medium leading-relaxed text-white/54">
