@@ -20,15 +20,15 @@ const Testimonials = () => {
     ];
 
     return (
-        <section id="depoimentos" className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+        <section id="depoimentos" className="notebook-section relative overflow-hidden bg-white py-16 sm:py-20 lg:py-18">
             <div className="absolute inset-x-0 top-0 h-px bg-black/10" />
-            <div className="container mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
-                <div className="grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-12 items-start">
+            <div className="container mx-auto max-w-6xl px-4 sm:px-8 lg:px-10">
+                <div className="grid items-start gap-10 lg:grid-cols-[.75fr_1.25fr] lg:gap-10">
                     <div className="fade-in">
-                        <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-[#b85228]">
+                        <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-gold-ink">
                             Experiências
                         </p>
-                        <h2 className="font-editorial text-4xl leading-none text-black sm:text-5xl lg:text-[3.45rem]">
+                        <h2 className="notebook-heading-medium font-editorial text-4xl leading-none text-black sm:text-5xl lg:text-[2.95rem]">
                             Alunos que encontraram um <span className="font-editorial-italic">caminho</span> mais claro.
                         </h2>
                     </div>
@@ -37,15 +37,15 @@ const Testimonials = () => {
                         {testimonials.map((t, index) => (
                             <div
                                 key={t.name}
-                                className={`fade-in-soft rounded-[1.25rem] border border-black/10 bg-[#fbf8f1] p-5 ${index === 1 ? "fade-delay-1 lg:translate-y-8" : index === 2 ? "fade-delay-2" : ""}`}
+                                className={`notebook-testimonial-card fade-in-soft rounded-card bg-brand p-4 text-white ${index === 1 ? "fade-delay-1 lg:translate-y-6" : index === 2 ? "fade-delay-2" : ""}`}
                             >
-                                <Quote size={28} className="mb-8 text-[#b85228]" />
-                                <p className="mb-8 leading-relaxed text-stone-700">
+                                <Quote size={25} className="mb-6 fill-highlight text-highlight" />
+                                <p className="font-editorial-italic mb-6 text-[1.08rem] leading-[1.5] text-white/90">
                                     "{t.text}"
                                 </p>
-                                <div className="pt-5 border-t border-black/10">
-                                    <p className="font-extrabold text-black">{t.name}</p>
-                                    <p className="text-sm text-stone-500">{t.role}</p>
+                                <div className="border-t border-white/18 pt-4">
+                                    <p className="font-extrabold text-white">{t.name}</p>
+                                    <p className="text-sm text-white/62">{t.role}</p>
                                 </div>
                             </div>
                         ))}
