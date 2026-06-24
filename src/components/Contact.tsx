@@ -3,7 +3,7 @@ import type { FormEvent } from "react";
 import { ArrowUpRight, Send } from "lucide-react";
 
 const Contact = () => {
-    const phoneNumber = "+5492214098715";
+    const phoneNumber = "+559294921844";
     const googleFormUrl = "";
     const [form, setForm] = useState({
         name: "",

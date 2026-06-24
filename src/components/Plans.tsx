@@ -1,7 +1,7 @@
 import { Check, Sparkles, Crown, Rocket } from 'lucide-react';
 
 const Plans = () => {
-    const phoneNumber = "+5492214098715";
+    const phoneNumber = "+559294921844";
 
     const messageEssencialPlane = "💡 Oi! Estou interessado no Plano Essencial e quero saber mais detalhes antes de começar. Pode me explicar como funciona?";
     const messagePremiumPlane = "🌟 Olá! Gostei do Plano Premium e quero entender melhor o que ele oferece. Pode me ajudar com as informações?";
