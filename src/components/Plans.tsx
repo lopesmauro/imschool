@@ -62,7 +62,7 @@ const Plans = () => {
         <div className="py-24 relative bg-gradient-to-b from-white via-amber-50/20 to-white">
             <div className="container mx-auto px-20 max-w-7xl">
                 <div className="text-center mb-16">
-                    <p className="text-amber-600 uppercase tracking-wide font-semibold mb-3">
+                    <p className="text-brand uppercase tracking-wide font-semibold mb-3">
                         Planos e Preços
                     </p>
                     <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ArrowDown, Menu, X } from "lucide-react";
 import Logo from "./Logo";
 
 const Navbar = () => {
@@ -20,13 +20,16 @@ const Navbar = () => {
                         <Logo />
                     </div>
 
-                    <nav aria-label="Navegação principal" className="hidden lg:block">
-                        <ul className="flex items-center gap-1">
+                    <nav
+                        aria-label="Navegação principal"
+                        className="hidden rounded-full border border-white/14 bg-black/26 px-1.5 py-1 shadow-[0_18px_50px_-38px_rgba(0,0,0,.9)] backdrop-blur-xl lg:block"
+                    >
+                        <ul className="flex items-center gap-0.5">
                             {navItems.map((item) => (
                                 <li key={item.label}>
                                     <a
                                         href={item.href}
-                                        className="inline-flex min-h-10 items-center px-3 text-[0.68rem] font-extrabold uppercase tracking-[0.13em] text-white/72 transition-colors hover:text-highlight"
+                                        className="inline-flex min-h-9 items-center rounded-full px-3 text-sm font-bold tracking-normal text-white/78 transition-colors hover:bg-white/10 hover:text-white"
                                     >
                                         {item.label}
                                     </a>
@@ -37,9 +40,10 @@ const Navbar = () => {
 
                     <a
                         href="#contato"
-                        className="hidden min-h-10 items-center justify-center justify-self-end rounded-full bg-brand px-5 py-2 text-xs font-extrabold uppercase tracking-[0.1em] text-white transition-colors hover:bg-brand-dark lg:inline-flex"
+                        className="group hidden min-h-10 items-center justify-center gap-2 justify-self-end rounded-full bg-highlight px-5 py-2 text-xs font-extrabold lowercase tracking-[0.1em] text-brand-dark shadow-[0_10px_30px_rgba(255,220,88,.18)] transition-all hover:-translate-y-0.5 hover:bg-white lg:inline-flex"
                     >
-                        Cadastrar
+                        cadastrar
+                        <ArrowDown className="h-3.5 w-3.5 transition-transform group-hover:translate-y-1" />
                     </a>
 
                     <button
@@ -76,9 +80,10 @@ const Navbar = () => {
                         <a
                             href="#contato"
                             onClick={() => setMenuOpen(false)}
-                            className="mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-brand px-5 py-3 text-sm font-extrabold text-white transition-colors hover:bg-brand-dark"
+                            className="group mt-5 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-highlight px-5 py-3 text-sm font-extrabold lowercase text-brand-dark shadow-[0_10px_30px_rgba(255,220,88,.16)] transition-all hover:-translate-y-0.5 hover:bg-white"
                         >
-                            Cadastrar
+                            cadastrar
+                            <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-1" />
                         </a>
                     </div>
                 </div>

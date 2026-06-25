@@ -77,6 +77,10 @@ html {
   background-size: 12px 12px;
 }
 
+.flow-gradient-bg {
+  background: var(--gradient-flow);
+}
+
 .sketch-card {
   box-shadow:
     0 22px 60px -36px rgba(36, 31, 23, .45),
@@ -257,7 +261,7 @@ html {
   --night-border: #2b2926;
   --card-radius: 1.25rem;
   --section-space: 4.5rem;
-  --gradient-flow: linear-gradient(135deg, #000 0%, #000 36%, #351306 58%, #8d3717 78%, #cf5f2b 100%);
+  --gradient-flow: linear-gradient(180deg, transparent 0%, #000 16%, #000 38%, #351306 62%, #8d3717 82%, #cf5f2b 100%);
   --gradient-highlight: linear-gradient(110deg, #f8d85a 0%, #f2c94c 48%, #e88a2f 100%);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

@@ -5,6 +5,7 @@ import { ArrowUpRight, Send } from "lucide-react";
 const Contact = () => {
     const phoneNumber = "+559294921844";
     const googleFormUrl = "";
+    const fieldClass = "w-full rounded-[.85rem] border border-brand/12 bg-white px-4 py-3 text-stone-900 shadow-[inset_0_1px_0_rgba(255,255,255,.75)] outline-none transition placeholder:text-stone-400 focus:border-brand focus:bg-white focus:shadow-[0_0_0_4px_rgba(184,82,40,.10)]";
     const [form, setForm] = useState({
         name: "",
         email: "",
@@ -36,14 +37,14 @@ const Contact = () => {
     return (
         <section
             id="contato"
-            className="notebook-section relative overflow-hidden bg-paper py-16 sm:py-20 lg:py-18"
+            className="notebook-section relative z-30 overflow-hidden bg-paper py-16 sm:py-20 lg:py-18"
         >
             <div className="absolute left-0 top-0 h-28 w-full " />
             <div className="paper-dot absolute right-[-3rem] top-24 h-44 w-44 rounded-full opacity-50" />
             <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-8 lg:px-10">
                 <div className="fade-in mb-8 grid gap-5 lg:grid-cols-[.72fr_1fr] lg:items-end">
                     <div>
-                        <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-gold-ink">
+                        <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-brand">
                             Começar
                         </p>
                         <h2 className="notebook-heading-large font-editorial text-4xl leading-none text-black sm:text-5xl lg:text-[3.1rem]">
@@ -84,51 +85,53 @@ const Contact = () => {
                         )}
                     </div>
 
-                    <form id="consultoria-form" onSubmit={handleSubmit} className="fade-in-soft fade-delay-2 min-w-0 rounded-[1.35rem] border border-black/10 bg-white p-4 sm:p-5">
+                    <form id="consultoria-form" onSubmit={handleSubmit} className="fade-in-soft fade-delay-2 relative min-w-0 overflow-hidden rounded-[1.35rem] border border-brand/18 bg-paper p-4 sm:p-5">
+                        <div className="absolute inset-x-0 top-0 h-1 bg-[var(--gradient-highlight)]" />
+                        <div className="paper-dot pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-45" />
 
-                        <div className="grid sm:grid-cols-2 gap-4">
+                        <div className="relative grid sm:grid-cols-2 gap-4">
                             <label className="space-y-2">
-                                <span className="text-sm font-extrabold text-stone-800">Nome</span>
+                                <span className="text-sm font-extrabold text-brand-dark">Nome</span>
                                 <input
                                     required
                                     value={form.name}
                                     onChange={(event) => updateField("name", event.target.value)}
-                                    className="w-full rounded-[.9rem] border border-black/10 bg-paper px-4 py-3 outline-none transition focus:border-brand focus:bg-white"
+                                    className={fieldClass}
                                     placeholder="Seu nome"
                                 />
                             </label>
 
                             <label className="space-y-2">
-                                <span className="text-sm font-extrabold text-stone-800">Telefone</span>
+                                <span className="text-sm font-extrabold text-brand-dark">Telefone</span>
                                 <input
                                     required
                                     value={form.phone}
                                     onChange={(event) => updateField("phone", event.target.value)}
-                                    className="w-full rounded-[.9rem] border border-black/10 bg-paper px-4 py-3 outline-none transition focus:border-brand focus:bg-white"
+                                    className={fieldClass}
                                     placeholder="WhatsApp"
                                 />
                             </label>
                         </div>
 
-                        <label className="block space-y-2 mt-4">
-                            <span className="text-sm font-extrabold text-stone-800">Email</span>
+                        <label className="relative block space-y-2 mt-4">
+                            <span className="text-sm font-extrabold text-brand-dark">Email</span>
                             <input
                                 required
                                 type="email"
                                 value={form.email}
                                 onChange={(event) => updateField("email", event.target.value)}
-                                className="w-full rounded-[.9rem] border border-black/10 bg-paper px-4 py-3 outline-none transition focus:border-brand focus:bg-white"
+                                className={fieldClass}
                                 placeholder="voce@email.com"
                             />
                         </label>
 
-                        <label className="block space-y-2 mt-4">
-                            <span className="text-sm font-extrabold text-stone-800">Qual seu objetivo com o inglês?</span>
+                        <label className="relative block space-y-2 mt-4">
+                            <span className="text-sm font-extrabold text-brand-dark">Qual seu objetivo com o inglês?</span>
                             <select
                                 required
                                 value={form.goal}
                                 onChange={(event) => updateField("goal", event.target.value)}
-                                className="w-full rounded-[.9rem] border border-black/10 bg-paper px-4 py-3 outline-none transition focus:border-brand focus:bg-white"
+                                className={fieldClass}
                             >
                                 <option value="">Selecione uma opção</option>
                                 <option>Conversar com mais segurança</option>
@@ -139,19 +142,19 @@ const Contact = () => {
                             </select>
                         </label>
 
-                        <label className="block space-y-2 mt-4">
-                            <span className="text-sm font-extrabold text-stone-800">O que mais te trava hoje?</span>
+                        <label className="relative block space-y-2 mt-4">
+                            <span className="text-sm font-extrabold text-brand-dark">O que mais te trava hoje?</span>
                             <textarea
                                 required
                                 rows={4}
                                 value={form.challenge}
                                 onChange={(event) => updateField("challenge", event.target.value)}
-                                className="w-full resize-none rounded-[.9rem] border border-black/10 bg-paper px-4 py-3 outline-none transition focus:border-brand focus:bg-white"
+                                className={`${fieldClass} resize-none`}
                                 placeholder="Conte rapidamente sua dificuldade principal"
                             />
                         </label>
 
-                        <div className="mt-6">
+                        <div className="relative mt-6">
                             <button
                                 type="submit"
                                 className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand px-6 py-3 font-extrabold text-white transition-all hover:-translate-y-0.5 hover:bg-brand-dark sm:w-auto"
@@ -161,7 +164,7 @@ const Contact = () => {
                             </button>
                         </div>
 
-                        <p className="mt-4 text-xs text-stone-500">
+                        <p className="relative mt-4 text-xs font-medium text-stone-500">
                             Depois da análise, você recebe a recomendação mais adequada para evoluir no inglês.
                         </p>
                     </form>

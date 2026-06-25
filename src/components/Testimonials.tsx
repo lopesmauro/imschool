@@ -25,7 +25,7 @@ const Testimonials = () => {
             <div className="container mx-auto max-w-6xl px-4 sm:px-8 lg:px-10">
                 <div className="grid items-start gap-10 lg:grid-cols-[.75fr_1.25fr] lg:gap-10">
                     <div className="fade-in">
-                        <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-gold-ink">
+                        <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-brand">
                             Experiências
                         </p>
                         <h2 className="notebook-heading-medium font-editorial text-4xl leading-none text-black sm:text-5xl lg:text-[2.95rem]">
@@ -44,8 +44,8 @@ const Testimonials = () => {
                                     "{t.text}"
                                 </p>
                                 <div className="border-t border-white/18 pt-4">
-                                    <p className="font-extrabold text-white">{t.name}</p>
-                                    <p className="text-sm text-white/62">{t.role}</p>
+                                    <p className="font-extrabold text-white/80">{t.name}</p>
+                                    <p className="text-sm text-white/52">{t.role}</p>
                                 </div>
                             </div>
                         ))}

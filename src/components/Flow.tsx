@@ -28,13 +28,13 @@ const Flow = () => {
     ];
 
     return (
-        <section id="processo" className="notebook-section relative overflow-hidden bg-black py-16 text-white sm:py-20 lg:py-18">
-            <div className="absolute inset-0 bg-[var(--gradient-flow)]" />
+        <section id="processo" className="notebook-section relative overflow-visible bg-black py-16 text-white sm:py-20 lg:py-18">
+            <div className="flow-gradient-bg pointer-events-none absolute inset-x-0 -top-24 bottom-0 z-0" />
 
             <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-8 lg:px-10">
                 <div className="fade-in mb-8">
                     <div className="max-w-2xl">
-                        <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-highlight">
+                        <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-brand">
                             Como funciona
                         </p>
                         <h2 className="notebook-heading-medium font-editorial text-4xl leading-none sm:text-5xl lg:text-[2.75rem]">

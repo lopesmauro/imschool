@@ -7,6 +7,12 @@ const Footer = () => {
     { label: "Experiências", href: "#depoimentos" },
     { label: "Diagnóstico", href: "#contato" },
   ];
+  const socialLinks = [
+    { label: "instagram", href: "#" },
+    { label: "youtube", href: "#" },
+    { label: "linkedin", href: "#" },
+    { label: "whatsapp", href: "#contato" },
+  ];
 
   return (
     <footer className="grain-overlay relative overflow-hidden bg-night text-white">
@@ -15,7 +21,7 @@ const Footer = () => {
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-8 lg:px-10">
 
-        <div className="notebook-footer-main grid gap-10 py-10 sm:py-12 lg:grid-cols-[1.25fr_.75fr] lg:items-start">
+        <div className="notebook-footer-main grid gap-y-10 py-10 sm:grid-cols-[1fr_auto_auto] sm:gap-x-10 sm:py-12 lg:items-start">
           <div>
             <a href="#" aria-label="Voltar ao início" className="inline-flex">
               <img
@@ -23,23 +29,41 @@ const Footer = () => {
                 alt="Logo ImSchool"
                 width={320}
                 height={104}
-                className="h-auto w-16 object-contain sm:w-18"
+                className="h-auto w-12 object-contain sm:w-14"
               />
             </a>
-            <p className="mt-5 max-w-sm text-sm font-medium leading-relaxed text-white/54">
-              Inglês com clareza, prática e uma direção feita para o seu momento.
-            </p>
           </div>
 
-          <nav aria-label="Navegação do rodapé">
-            <ul className="grid grid-cols-2 gap-x-8 gap-y-4">
+          <nav aria-label="Seções da ImSchool">
+            <p className="mb-5 text-xs font-bold lowercase tracking-[0.08em] text-white/62">
+              imschool
+            </p>
+            <ul className="grid gap-y-4">
               {navigation.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="inline-flex items-center text-sm font-bold text-white/68 hover:text-white"
+                    className="inline-flex items-center text-sm font-medium lowercase text-white/30 transition-colors hover:text-white/62"
                   >
-                    {link.label}
+                    {link.label.toLowerCase()}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav aria-label="Redes sociais">
+            <p className="mb-5 text-xs font-bold lowercase tracking-[0.08em] text-white/62">
+              network
+            </p>
+            <ul className="grid gap-y-4">
+              {socialLinks.map(({ label, href }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    className="inline-flex items-center text-sm font-medium lowercase text-white/30 transition-colors hover:text-white/62"
+                  >
+                    {label}
                   </a>
                 </li>
               ))}
