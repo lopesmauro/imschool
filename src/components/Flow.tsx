@@ -37,7 +37,7 @@ const Flow = () => {
                         <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-brand">
                             Como funciona
                         </p>
-                        <h2 className="notebook-heading-medium font-editorial text-4xl leading-none sm:text-5xl lg:text-[2.75rem]">
+                        <h2 className="notebook-heading-medium font-heading text-4xl font-medium leading-none sm:text-5xl lg:text-[2.75rem]">
                             <span className="font-editorial-italic">Simples</span> e rápido, com direção desde o primeiro contato.
                         </h2>
                     </div>

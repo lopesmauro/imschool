@@ -5,7 +5,7 @@ import { ArrowUpRight, Send } from "lucide-react";
 const Contact = () => {
     const phoneNumber = "+559294921844";
     const googleFormUrl = "";
-    const fieldClass = "w-full rounded-[.85rem] border border-brand/12 bg-white px-4 py-3 text-stone-900 shadow-[inset_0_1px_0_rgba(255,255,255,.75)] outline-none transition placeholder:text-stone-400 focus:border-brand focus:bg-white focus:shadow-[0_0_0_4px_rgba(184,82,40,.10)]";
+    const fieldClass = "w-full rounded-[.85rem] border border-brand/24 bg-white px-4 py-3 text-stone-900 shadow-[inset_0_1px_0_rgba(255,255,255,.75)] outline-none transition placeholder:text-stone-400 focus:border-brand focus:bg-white focus:shadow-[0_0_0_4px_rgba(184,82,40,.10)]";
     const [form, setForm] = useState({
         name: "",
         email: "",
@@ -41,13 +41,14 @@ const Contact = () => {
         >
             <div className="absolute left-0 top-0 h-28 w-full " />
             <div className="paper-dot absolute right-[-3rem] top-24 h-44 w-44 rounded-full opacity-50" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand/10 via-highlight/10 to-transparent" />
             <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-8 lg:px-10">
                 <div className="fade-in mb-8 grid gap-5 lg:grid-cols-[.72fr_1fr] lg:items-end">
                     <div>
                         <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-brand">
                             Começar
                         </p>
-                        <h2 className="notebook-heading-large font-editorial text-4xl leading-none text-black sm:text-5xl lg:text-[3.1rem]">
+                        <h2 className="notebook-heading-large font-heading text-4xl font-medium leading-none text-black sm:text-5xl lg:text-[3.1rem]">
                             Comece seu <span className="font-editorial-italic">diagnóstico</span> de inglês agora.
                         </h2>
                     </div>

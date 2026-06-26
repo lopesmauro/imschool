@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(420px,500px)] lg:items-end">
           <div className="max-w-2xl">
 
-            <h1 className="notebook-hero-title hero-reveal font-editorial max-w-[13ch] text-[3.35rem] leading-[0.98] tracking-normal text-white sm:text-7xl lg:text-[4.5rem]">
+            <h1 className="notebook-hero-title hero-reveal font-heading max-w-[13ch] text-[3.35rem] font-medium leading-[0.98] tracking-normal text-white sm:text-7xl lg:text-[4.5rem]">
               Aprenda{" "}
               <Shimmer
                 as="span"

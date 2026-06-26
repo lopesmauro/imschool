@@ -29,7 +29,7 @@ const AboutUs = () => {
             <p className="mb-4 inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.22em] text-brand">
               Método ImSchool
             </p>
-            <h2 className="notebook-heading-large font-editorial text-4xl leading-[0.95] text-white sm:text-5xl lg:text-[3.55rem]">
+            <h2 className="notebook-heading-large font-heading text-4xl font-medium leading-[0.95] text-white sm:text-5xl lg:text-[3.55rem]">
               Inglês na <span className="font-editorial-italic">prática</span>, sem complicação.
             </h2>
 

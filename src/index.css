@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -193,7 +193,7 @@ html {
 
 @theme inline {
   --font-sans: 'DM Sans', sans-serif;
-  --font-heading: var(--font-editorial);
+  --font-heading: 'Poppins', sans-serif;
   --font-editorial: Georgia, 'Times New Roman', serif;
   --color-brand: var(--brand);
   --color-brand-dark: var(--brand-dark);

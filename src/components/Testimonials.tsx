@@ -28,7 +28,7 @@ const Testimonials = () => {
                         <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-brand">
                             Experiências
                         </p>
-                        <h2 className="notebook-heading-medium font-editorial text-4xl leading-none text-black sm:text-5xl lg:text-[2.95rem]">
+                        <h2 className="notebook-heading-medium font-heading text-4xl font-medium leading-none text-black sm:text-5xl lg:text-[2.95rem]">
                             Alunos que encontraram um <span className="font-editorial-italic">caminho</span> mais claro.
                         </h2>
                     </div>
@@ -40,7 +40,7 @@ const Testimonials = () => {
                                 className={`notebook-testimonial-card fade-in-soft rounded-card bg-brand p-4 text-white ${index === 1 ? "fade-delay-1 lg:translate-y-6" : index === 2 ? "fade-delay-2" : ""}`}
                             >
                                 <Quote size={25} className="mb-6 fill-highlight text-highlight" />
-                                <p className="font-editorial-italic mb-6 text-[1.08rem] leading-[1.5] text-white/90">
+                                <p className="mb-6 text-[1.08rem] font-medium italic leading-[1.5] text-white/90">
                                     "{t.text}"
                                 </p>
                                 <div className="border-t border-white/18 pt-4">
