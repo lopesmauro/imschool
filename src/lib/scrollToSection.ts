@@ -1,15 +1,14 @@
 export const scrollToSection = (id: string) => {
-  const event = new CustomEvent("imschool:navigate", {
-    cancelable: true,
-    detail: { id },
-  });
+  const element = document.getElementById(id);
 
-  const wasHandledByCustomScroll = !window.dispatchEvent(event);
-
-  if (!wasHandledByCustomScroll) {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+  if (!element) {
+    return;
   }
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  element.scrollIntoView({
+    behavior: prefersReducedMotion ? "auto" : "smooth",
+    block: "start",
+  });
 };
