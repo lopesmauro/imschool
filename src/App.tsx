@@ -45,6 +45,25 @@ function App() {
       animationFrame = window.requestAnimationFrame(animateScroll)
     }
 
+    const handleSectionNavigate = (event: Event) => {
+      const { id } = (event as CustomEvent<{ id?: string }>).detail ?? {}
+      const element = id ? document.getElementById(id) : null
+
+      if (!element) {
+        return
+      }
+
+      event.preventDefault()
+
+      if (animationFrame !== null) {
+        window.cancelAnimationFrame(animationFrame)
+      }
+
+      currentScroll = window.scrollY
+      targetScroll = clampScroll(element.getBoundingClientRect().top + window.scrollY)
+      animationFrame = window.requestAnimationFrame(animateScroll)
+    }
+
     const handleWheel = (event: WheelEvent) => {
       if (event.ctrlKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
         return
@@ -69,10 +88,12 @@ function App() {
 
     window.addEventListener('wheel', handleWheel, { passive: false })
     window.addEventListener('resize', syncScrollPosition)
+    window.addEventListener('imschool:navigate', handleSectionNavigate)
 
     return () => {
       window.removeEventListener('wheel', handleWheel)
       window.removeEventListener('resize', syncScrollPosition)
+      window.removeEventListener('imschool:navigate', handleSectionNavigate)
 
       if (animationFrame !== null) {
         window.cancelAnimationFrame(animationFrame)

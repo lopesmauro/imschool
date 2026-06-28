@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Shimmer } from "@/components/ai/shimmer";
+import { scrollToSection } from "@/lib/scrollToSection";
 
 const Hero = () => {
   return (
@@ -39,6 +40,10 @@ const Hero = () => {
             <div className="hero-reveal-delay mt-7 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#contato"
+                onClick={(event) => {
+                  event.preventDefault();
+                  scrollToSection("contato");
+                }}
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-extrabold text-white transition-all hover:-translate-y-0.5 hover:bg-brand-dark"
               >
                 Iniciar diagnóstico

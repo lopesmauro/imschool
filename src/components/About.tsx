@@ -1,5 +1,5 @@
 import { useState } from "react";
-import website from "../assets/website.png";
+import platform from "../assets/platform.png";
 import { ChevronDown } from "lucide-react";
 
 const AboutUs = () => {
@@ -71,7 +71,7 @@ const AboutUs = () => {
 
           <div className="notebook-platform-preview relative min-h-[360px] overflow-hidden rounded-[1.1rem] bg-black lg:min-h-[560px]">
             <img
-              src={website}
+              src={platform}
               alt=""
               className="absolute inset-0 h-full w-full object-cover object-center opacity-95"
             />

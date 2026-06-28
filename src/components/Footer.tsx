@@ -1,17 +1,18 @@
 import { ArrowUp } from "lucide-react";
+import { scrollToSection } from "@/lib/scrollToSection";
 
 const Footer = () => {
   const navigation = [
-    { label: "Método", href: "#sobre" },
-    { label: "Processo", href: "#processo" },
-    { label: "Experiências", href: "#depoimentos" },
-    { label: "Diagnóstico", href: "#contato" },
+    { label: "Método", href: "#sobre", sectionId: "sobre" },
+    { label: "Processo", href: "#processo", sectionId: "processo" },
+    { label: "Experiências", href: "#depoimentos", sectionId: "depoimentos" },
+    { label: "Diagnóstico", href: "#contato", sectionId: "contato" },
   ];
   const socialLinks = [
     { label: "instagram", href: "#" },
     { label: "youtube", href: "#" },
     { label: "linkedin", href: "#" },
-    { label: "whatsapp", href: "#contato" },
+    { label: "whatsapp", href: "#contato", sectionId: "contato" },
   ];
 
   return (
@@ -43,6 +44,10 @@ const Footer = () => {
                 <li key={link.label}>
                   <a
                     href={link.href}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      scrollToSection(link.sectionId);
+                    }}
                     className="inline-flex items-center text-sm font-medium lowercase text-white/30 transition-colors hover:text-white/62"
                   >
                     {link.label.toLowerCase()}
@@ -57,14 +62,27 @@ const Footer = () => {
               network
             </p>
             <ul className="grid gap-y-4">
-              {socialLinks.map(({ label, href }) => (
+              {socialLinks.map(({ label, href, sectionId }) => (
                 <li key={label}>
-                  <a
-                    href={href}
-                    className="inline-flex items-center text-sm font-medium lowercase text-white/30 transition-colors hover:text-white/62"
-                  >
-                    {label}
-                  </a>
+                  {sectionId ? (
+                    <a
+                      href={href}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        scrollToSection(sectionId);
+                      }}
+                      className="inline-flex items-center text-sm font-medium lowercase text-white/30 transition-colors hover:text-white/62"
+                    >
+                      {label}
+                    </a>
+                  ) : (
+                    <a
+                      href={href}
+                      className="inline-flex items-center text-sm font-medium lowercase text-white/30 transition-colors hover:text-white/62"
+                    >
+                      {label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -73,10 +91,14 @@ const Footer = () => {
 
         <div className="flex flex-col gap-4 border-t border-white/10 py-6 text-xs font-medium text-white/38 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} ImSchool. Todos os direitos reservados.</p>
-          <a href="#" className="group inline-flex items-center gap-2 transition-colors hover:text-white">
-            Voltar ao topo
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="group inline-flex items-center gap-2 transition-colors hover:text-white"
+            aria-label="Voltar ao início"
+          >
             <ArrowUp className="h-3.5 w-3.5 text-highlight transition-transform group-hover:-translate-y-1" />
-          </a>
+          </button>
         </div>
       </div>
     </footer>
