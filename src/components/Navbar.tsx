@@ -49,7 +49,7 @@ const Navbar = () => {
                             event.preventDefault();
                             scrollToSection("contato");
                         }}
-                        className="group hidden min-h-10 items-center justify-center gap-2 justify-self-end rounded-full bg-highlight px-5 py-2 text-xs font-extrabold lowercase tracking-[0.1em] text-brand-dark shadow-[0_10px_30px_rgba(255,220,88,.18)] transition-all hover:-translate-y-0.5 hover:bg-white lg:inline-flex"
+                        className="group hidden min-h-10 items-center justify-center gap-2 justify-self-end rounded-full bg-highlight px-5 py-2 text-xs font-extrabold lowercase tracking-[0.1em] text-brand-dark shadow-[0_10px_30px_rgba(255,220,88,.18)] transition-all hover:-translate-y-0.5 hover:bg-[var(--highlight-dark)] lg:inline-flex"
                     >
                         cadastrar
                         <ArrowDown className="h-3.5 w-3.5 transition-transform group-hover:translate-y-1" />
@@ -97,7 +97,7 @@ const Navbar = () => {
                                 setMenuOpen(false);
                                 scrollToSection("contato");
                             }}
-                            className="group mt-5 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-highlight px-5 py-3 text-sm font-extrabold lowercase text-brand-dark shadow-[0_10px_30px_rgba(255,220,88,.16)] transition-all hover:-translate-y-0.5 hover:bg-white"
+                            className="group mt-5 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-highlight px-5 py-3 text-sm font-extrabold lowercase text-brand-dark shadow-[0_10px_30px_rgba(255,220,88,.16)] transition-all hover:-translate-y-0.5 hover:bg-[var(--highlight-dark)]"
                         >
                             cadastrar
                             <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-1" />

@@ -158,7 +158,7 @@ const Contact = () => {
                         <div className="relative mt-6">
                             <button
                                 type="submit"
-                                className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-highlight px-6 py-3 font-extrabold text-brand-dark shadow-[0_10px_26px_rgba(255,220,88,.22)] transition-all hover:-translate-y-0.5 hover:bg-white sm:w-auto"
+                                className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-highlight px-6 py-3 font-extrabold text-brand-dark shadow-[0_10px_26px_rgba(255,220,88,.22)] transition-all hover:-translate-y-0.5 hover:bg-[var(--highlight-dark)] sm:w-auto"
                             >
                                 Iniciar diagnóstico
                                 <Send className="h-4 w-4 text-brand" />
